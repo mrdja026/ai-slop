@@ -1,0 +1,21 @@
+2025-03-16 12:33:25,395 - INFO - Starting model loading process...
+2025-03-16 12:33:25,977 - ERROR - An unexpected error occurred: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/meta-llama/Llama-2-7b-chat-hf.
+401 Client Error. (Request ID: Root=1-67d6b705-2590d629729918413695596f;9480c5d6-ec2c-474b-ae7d-476eb9e495c1)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/main/config.json.
+Access to model meta-llama/Llama-2-7b-chat-hf is restricted. You must have access to it and be authenticated to access it. Please log in.
+2025-03-16 12:35:24,615 - INFO - Starting model loading process...
+2025-03-16 12:35:25,101 - ERROR - An unexpected error occurred: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/meta-llama/Llama-2-7b-chat-hf.
+403 Client Error. (Request ID: Root=1-67d6b77c-749fab874872b96277d94ebb;9e375c36-085b-4bbd-84de-a688fc925f97)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/main/config.json.
+Access to model meta-llama/Llama-2-7b-chat-hf is restricted and you are not in the authorized list. Visit https://huggingface.co/meta-llama/Llama-2-7b-chat-hf to ask for access.
+2025-03-16 12:38:23,280 - INFO - Starting model loading process...
+2025-03-16 12:38:24,460 - ERROR - An unexpected error occurred: You are trying to access a gated repo.
+Make sure to have access to it at https://huggingface.co/meta-llama/Llama-2-7b-chat-hf.
+403 Client Error. (Request ID: Root=1-67d6b830-46e638536f60978a640d140a;e296e170-cbd7-45f5-9b65-0ec5ed1f9582)
+
+Cannot access gated repo for url https://huggingface.co/meta-llama/Llama-2-7b-chat-hf/resolve/main/config.json.
+Access to model meta-llama/Llama-2-7b-chat-hf is restricted and you are not in the authorized list. Visit https://huggingface.co/meta-llama/Llama-2-7b-chat-hf to ask for access.

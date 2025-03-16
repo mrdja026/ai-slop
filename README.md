@@ -1,10 +1,13 @@
 # Testing Lallama 7B Models for general GEN AI
 
+## TODO
+
+file structure and how to install
 
 ## Two point aproach
 
- - [] Master prompt template without fine tuning
- - [] Fine tuning with with limited data tests
+ - [X] Master prompt template without fine tuning
+ - [X] Fine tuning with with limited data tests
     - in poggers
 
 
@@ -33,3 +36,4 @@
  - API
  - Client
  - Maintainece of requqiments.txt
+ - check meta access of lama models for chat
