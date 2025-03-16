@@ -1,0 +1,148 @@
+2025-03-16 13:01:38,872 - INFO - Sending request to LLM API
+2025-03-16 13:01:38,879 - ERROR - API request failed: 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2025-03-16 13:03:50,576 - INFO - Setting up environment
+2025-03-16 13:03:50,662 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:03:50,662 - INFO - Loading model and tokenizer
+2025-03-16 13:03:51,679 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:03:57,551 - INFO - Generating response
+2025-03-16 13:04:04,236 - INFO - Response generated in 6.69 seconds
+2025-03-16 13:04:56,941 - INFO - Setting up environment
+2025-03-16 13:04:57,025 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:04:57,025 - INFO - Loading model and tokenizer
+2025-03-16 13:04:57,683 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:05:03,755 - INFO - Generating response
+2025-03-16 13:05:12,526 - INFO - Response generated in 8.77 seconds
+2025-03-16 13:06:49,476 - INFO - Setting up environment
+2025-03-16 13:06:49,557 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:06:49,557 - INFO - Loading model and tokenizer
+2025-03-16 13:06:50,211 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:06:56,136 - INFO - Generating response
+2025-03-16 13:07:07,475 - INFO - Response generated in 11.34 seconds
+2025-03-16 13:09:02,213 - INFO - Generating 10 different scenarios
+2025-03-16 13:09:02,213 - INFO - Generating scenario 1/10
+2025-03-16 13:09:02,213 - INFO - Setting up environment
+2025-03-16 13:09:02,294 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:09:02,294 - INFO - Loading model and tokenizer
+2025-03-16 13:09:03,200 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:09:09,284 - INFO - Generating response
+2025-03-16 13:09:13,798 - INFO - Response generated in 4.51 seconds
+2025-03-16 13:09:15,810 - INFO - Generating scenario 2/10
+2025-03-16 13:09:15,810 - INFO - Setting up environment
+2025-03-16 13:09:15,811 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:09:15,811 - INFO - Loading model and tokenizer
+2025-03-16 13:09:16,179 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:09:18,283 - INFO - Generating response
+2025-03-16 13:09:27,162 - INFO - Response generated in 8.88 seconds
+2025-03-16 13:09:29,170 - INFO - Generating scenario 3/10
+2025-03-16 13:09:29,171 - INFO - Setting up environment
+2025-03-16 13:09:29,171 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:09:29,171 - INFO - Loading model and tokenizer
+2025-03-16 13:09:29,529 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:09:31,331 - INFO - Generating response
+2025-03-16 13:09:35,171 - INFO - Response generated in 3.84 seconds
+2025-03-16 13:09:37,181 - INFO - Generating scenario 4/10
+2025-03-16 13:09:37,181 - INFO - Setting up environment
+2025-03-16 13:09:37,181 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:09:37,181 - INFO - Loading model and tokenizer
+2025-03-16 13:09:37,736 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:09:39,601 - INFO - Generating response
+2025-03-16 13:09:43,067 - INFO - Response generated in 3.47 seconds
+2025-03-16 13:09:45,078 - INFO - Generating scenario 5/10
+2025-03-16 13:09:45,078 - INFO - Setting up environment
+2025-03-16 13:09:45,078 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:09:45,079 - INFO - Loading model and tokenizer
+2025-03-16 13:09:45,603 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:09:47,690 - INFO - Generating response
+2025-03-16 13:09:52,002 - INFO - Response generated in 4.31 seconds
+2025-03-16 13:09:54,012 - INFO - Generating scenario 6/10
+2025-03-16 13:09:54,012 - INFO - Setting up environment
+2025-03-16 13:09:54,012 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:09:54,013 - INFO - Loading model and tokenizer
+2025-03-16 13:09:54,382 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:09:56,285 - INFO - Generating response
+2025-03-16 13:10:04,287 - INFO - Response generated in 8.00 seconds
+2025-03-16 13:10:06,296 - INFO - Generating scenario 7/10
+2025-03-16 13:10:06,296 - INFO - Setting up environment
+2025-03-16 13:10:06,296 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:10:06,296 - INFO - Loading model and tokenizer
+2025-03-16 13:10:06,649 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:10:08,457 - INFO - Generating response
+2025-03-16 13:10:11,396 - INFO - Response generated in 2.94 seconds
+2025-03-16 13:10:13,415 - INFO - Generating scenario 8/10
+2025-03-16 13:10:13,416 - INFO - Setting up environment
+2025-03-16 13:10:13,416 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:10:13,416 - INFO - Loading model and tokenizer
+2025-03-16 13:10:13,783 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:10:15,652 - INFO - Generating response
+2025-03-16 13:10:25,930 - INFO - Response generated in 10.28 seconds
+2025-03-16 13:10:27,959 - INFO - Generating scenario 9/10
+2025-03-16 13:10:27,960 - INFO - Setting up environment
+2025-03-16 13:10:27,960 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:10:27,960 - INFO - Loading model and tokenizer
+2025-03-16 13:10:28,331 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:10:30,344 - INFO - Generating response
+2025-03-16 13:10:33,963 - INFO - Response generated in 3.62 seconds
+2025-03-16 13:10:35,974 - INFO - Generating scenario 10/10
+2025-03-16 13:10:35,974 - INFO - Setting up environment
+2025-03-16 13:10:35,974 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:10:35,974 - INFO - Loading model and tokenizer
+2025-03-16 13:10:36,398 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:10:38,561 - INFO - Generating response
+2025-03-16 13:10:41,083 - INFO - Response generated in 2.52 seconds
+2025-03-16 13:10:43,095 - INFO - All generations completed and saved to response-agent.json
+2025-03-16 13:12:58,657 - INFO - Attempting 10 different scenarios
+2025-03-16 13:12:58,657 - INFO - Setting up environment
+2025-03-16 13:12:58,710 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:12:58,711 - INFO - Loading model and tokenizer
+2025-03-16 13:12:59,346 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:13:01,302 - INFO - Generating scenario 1/10
+2025-03-16 13:13:01,303 - INFO - Generating response
+2025-03-16 13:13:06,486 - INFO - Generating scenario 2/10
+2025-03-16 13:13:06,486 - INFO - Generating response
+2025-03-16 13:13:11,459 - INFO - Generating scenario 3/10
+2025-03-16 13:13:11,459 - INFO - Generating response
+2025-03-16 13:13:16,223 - INFO - Generating scenario 4/10
+2025-03-16 13:13:16,223 - INFO - Generating response
+2025-03-16 13:13:22,353 - INFO - Generating scenario 5/10
+2025-03-16 13:13:22,353 - INFO - Generating response
+2025-03-16 13:13:33,818 - INFO - Generating scenario 6/10
+2025-03-16 13:13:33,818 - INFO - Generating response
+2025-03-16 13:13:40,287 - INFO - Generating scenario 7/10
+2025-03-16 13:13:40,287 - INFO - Generating response
+2025-03-16 13:13:43,484 - INFO - Generating scenario 8/10
+2025-03-16 13:13:43,484 - INFO - Generating response
+2025-03-16 13:13:56,030 - INFO - Generating scenario 9/10
+2025-03-16 13:13:56,030 - INFO - Generating response
+2025-03-16 13:14:00,916 - INFO - Generating scenario 10/10
+2025-03-16 13:14:00,916 - INFO - Generating response
+2025-03-16 13:14:10,220 - INFO - Process completed. Successful generations: 10
+2025-03-16 13:14:10,220 - INFO - Failed generations: 0
+2025-03-16 13:14:10,220 - INFO - Results saved to response-agent.json
+2025-03-16 13:15:41,860 - INFO - Attempting 10 different scenarios
+2025-03-16 13:15:41,860 - INFO - Setting up environment
+2025-03-16 13:15:41,913 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 13:15:41,913 - INFO - Loading model and tokenizer
+2025-03-16 13:15:42,513 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 13:15:44,511 - INFO - Generating scenario 1/10
+2025-03-16 13:15:44,511 - INFO - Generating response
+2025-03-16 13:15:50,538 - INFO - Generating scenario 2/10
+2025-03-16 13:15:50,538 - INFO - Generating response
+2025-03-16 13:15:54,160 - INFO - Generating scenario 3/10
+2025-03-16 13:15:54,160 - INFO - Generating response
+2025-03-16 13:16:07,087 - INFO - Generating scenario 4/10
+2025-03-16 13:16:07,087 - INFO - Generating response
+2025-03-16 13:16:13,917 - INFO - Generating scenario 5/10
+2025-03-16 13:16:13,918 - INFO - Generating response
+2025-03-16 13:16:19,498 - INFO - Generating scenario 6/10
+2025-03-16 13:16:19,498 - INFO - Generating response
+2025-03-16 13:16:32,925 - INFO - Generating scenario 7/10
+2025-03-16 13:16:32,925 - INFO - Generating response
+2025-03-16 13:16:38,321 - INFO - Generating scenario 8/10
+2025-03-16 13:16:38,321 - INFO - Generating response
+2025-03-16 13:16:43,510 - INFO - Generating scenario 9/10
+2025-03-16 13:16:43,510 - INFO - Generating response
+2025-03-16 13:16:55,962 - INFO - Generating scenario 10/10
+2025-03-16 13:16:55,962 - INFO - Generating response
+2025-03-16 13:16:57,148 - INFO - Process completed. Successful generations: 10
+2025-03-16 13:16:57,148 - INFO - Failed generations: 0
+2025-03-16 13:16:57,148 - INFO - Results saved to response-agent.json
