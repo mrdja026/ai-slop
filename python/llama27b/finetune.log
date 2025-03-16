@@ -207,3 +207,162 @@
         Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
         to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
         and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
+2025-03-16 01:59:52,302 - INFO - Dataset loaded with 1 examples
+2025-03-16 01:59:52,303 - INFO - Dataset features: {'instructions': Value(dtype='string', id=None), 'input': Value(dtype='string', id=None), 'output': Value(dtype='string', id=None)}
+2025-03-16 01:59:52,303 - INFO - Dataset size: 1
+2025-03-16 01:59:52,303 - INFO - First example:
+2025-03-16 01:59:52,303 - INFO - {'instructions': 'Create large village', 'input': '', 'output': 'Xanadu Desert and hot enviroment'}
+2025-03-16 01:59:50,449 - INFO - Tokenizer loaded successfully
+2025-03-16 01:59:50,449 - INFO - Using device: cuda
+2025-03-16 01:59:50,449 - INFO - Total GPU memory: 15.99 GB
+2025-03-16 01:59:50,449 - INFO - Setting GPU memory limit to: 8GB
+2025-03-16 01:59:50,600 - ERROR - Unexpected error loading model/tokenizer: Failed to import transformers.integrations.bitsandbytes because of the following error (look up to see its traceback):
+
+        CUDA Setup failed despite GPU being available. Please run the following command to get more information:
+
+        python -m bitsandbytes
+
+        Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
+        to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
+        and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
+2025-03-16 01:59:50,600 - ERROR - Training failed: Failed to import transformers.integrations.bitsandbytes because of the following error (look up to see its traceback):
+
+        CUDA Setup failed despite GPU being available. Please run the following command to get more information:
+
+        python -m bitsandbytes
+
+        Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
+        to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
+        and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
+2025-03-16 01:59:50,600 - ERROR - Process failed: Failed to import transformers.integrations.bitsandbytes because of the following error (look up to see its traceback):
+
+        CUDA Setup failed despite GPU being available. Please run the following command to get more information:
+
+        python -m bitsandbytes
+
+        Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
+        to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
+        and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
+2025-03-16 02:02:06,839 - INFO - Dataset loaded with 1 examples
+2025-03-16 02:02:06,839 - INFO - Dataset features: {'instructions': Value(dtype='string', id=None), 'input': Value(dtype='string', id=None), 'output': Value(dtype='string', id=None)}
+2025-03-16 02:02:06,839 - INFO - Dataset size: 1
+2025-03-16 02:02:06,839 - INFO - First example:
+2025-03-16 02:02:06,839 - INFO - {'instructions': 'Create large village', 'input': '', 'output': 'Xanadu Desert and hot enviroment'}
+2025-03-16 02:02:07,186 - INFO - Tokenizer loaded successfully
+2025-03-16 02:02:07,186 - INFO - Using device: cuda
+2025-03-16 02:02:07,186 - INFO - Total GPU memory: 15.99 GB
+2025-03-16 02:02:07,186 - INFO - Setting GPU memory limit to: 8GB
+2025-03-16 02:02:07,557 - ERROR - Unexpected error loading model/tokenizer: Failed to import transformers.integrations.bitsandbytes because of the following error (look up to see its traceback):
+
+        CUDA Setup failed despite GPU being available. Please run the following command to get more information:
+
+        python -m bitsandbytes
+
+        Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
+        to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
+        and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
+2025-03-16 02:02:07,557 - ERROR - Training failed: Failed to import transformers.integrations.bitsandbytes because of the following error (look up to see its traceback):
+
+        CUDA Setup failed despite GPU being available. Please run the following command to get more information:
+
+        python -m bitsandbytes
+
+        Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
+        to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
+        and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
+2025-03-16 02:02:07,558 - ERROR - Process failed: Failed to import transformers.integrations.bitsandbytes because of the following error (look up to see its traceback):
+
+        CUDA Setup failed despite GPU being available. Please run the following command to get more information:
+
+        python -m bitsandbytes
+
+        Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
+        to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
+        and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
+2025-03-16 02:04:38,653 - INFO - Dataset loaded with 1 examples
+2025-03-16 02:04:38,653 - INFO - Dataset features: {'instructions': Value(dtype='string', id=None), 'input': Value(dtype='string', id=None), 'output': Value(dtype='string', id=None)}
+2025-03-16 02:04:38,653 - INFO - Dataset size: 1
+2025-03-16 02:04:38,653 - INFO - First example:
+2025-03-16 02:04:38,654 - INFO - {'instructions': 'Create large village', 'input': '', 'output': 'Xanadu Desert and hot enviroment'}
+2025-03-16 02:04:39,206 - INFO - Tokenizer loaded successfully
+2025-03-16 02:04:39,206 - INFO - Using device: cuda
+2025-03-16 02:04:39,206 - INFO - Total GPU memory: 15.99 GB
+2025-03-16 02:04:39,206 - INFO - Setting GPU memory limit to: 8GB
+2025-03-16 02:04:46,810 - INFO - Model loaded successfully with 8-bit quantization and memory optimizations
+2025-03-16 02:04:46,810 - INFO - Starting dataset tokenization...
+2025-03-16 02:04:46,859 - ERROR - Training failed: You cannot perform fine-tuning on purely quantized models. Please attach trainable adapters on top of the quantized model to correctly perform fine-tuning. Please see: https://huggingface.co/docs/transformers/peft for more details
+2025-03-16 02:04:46,859 - ERROR - Process failed: You cannot perform fine-tuning on purely quantized models. Please attach trainable adapters on top of the quantized model to correctly perform fine-tuning. Please see: https://huggingface.co/docs/transformers/peft for more details
+2025-03-16 02:06:58,934 - INFO - Dataset loaded with 1 examples
+2025-03-16 02:06:58,935 - INFO - Dataset features: {'instructions': Value(dtype='string', id=None), 'input': Value(dtype='string', id=None), 'output': Value(dtype='string', id=None)}
+2025-03-16 02:06:58,935 - INFO - Dataset size: 1
+2025-03-16 02:06:58,935 - INFO - First example:
+2025-03-16 02:06:58,935 - INFO - {'instructions': 'Create large village', 'input': '', 'output': 'Xanadu Desert and hot enviroment'}
+2025-03-16 02:06:59,276 - INFO - Tokenizer loaded successfully
+2025-03-16 02:06:59,276 - INFO - Using device: cuda
+2025-03-16 02:06:59,276 - INFO - Total GPU memory: 15.99 GB
+2025-03-16 02:06:59,276 - INFO - Setting GPU memory limit to: 8GB
+2025-03-16 02:07:04,192 - INFO - Model loaded successfully with 4-bit quantization, LoRA adapters, and memory optimizations
+2025-03-16 02:07:04,194 - INFO - Trainable parameters: 4194304
+2025-03-16 02:07:04,194 - INFO - Total parameters: 3504607232
+2025-03-16 02:07:04,194 - INFO - Percentage of trainable parameters: 0.12%
+2025-03-16 02:07:04,194 - INFO - Starting dataset tokenization...
+2025-03-16 02:07:04,279 - INFO - Starting training...
+2025-03-16 02:07:26,069 - INFO - Saving model and tokenizer...
+2025-03-16 02:07:26,436 - INFO - Training completed successfully
+2025-03-16 02:15:22,535 - INFO - Dataset loaded with 1 examples
+2025-03-16 02:15:22,535 - INFO - Dataset features: {'instructions': Value(dtype='string', id=None), 'input': Value(dtype='string', id=None), 'output': Value(dtype='string', id=None)}
+2025-03-16 02:15:22,535 - INFO - Dataset size: 1
+2025-03-16 02:15:22,535 - INFO - First example:
+2025-03-16 02:15:22,536 - INFO - {'instructions': 'Create large village', 'input': '', 'output': 'Xanadu Desert and hot enviroment'}
+2025-03-16 02:15:22,896 - INFO - Tokenizer loaded successfully
+2025-03-16 02:15:22,896 - INFO - Using device: cuda
+2025-03-16 02:15:22,896 - INFO - Total GPU memory: 15.99 GB
+2025-03-16 02:15:22,896 - INFO - Setting GPU memory limit to: 8GB
+2025-03-16 02:15:30,262 - INFO - Model loaded successfully with 4-bit quantization, LoRA adapters, and memory optimizations
+2025-03-16 02:15:30,264 - INFO - Trainable parameters: 16777216
+2025-03-16 02:15:30,264 - INFO - Total parameters: 3517190144
+2025-03-16 02:15:30,264 - INFO - Percentage of trainable parameters: 0.48%
+2025-03-16 02:15:30,264 - INFO - Starting dataset tokenization...
+2025-03-16 02:15:30,283 - ERROR - Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: IntervalStrategy.NO
+- Save strategy: SaveStrategy.STEPS
+2025-03-16 02:15:30,289 - ERROR - Process failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: IntervalStrategy.NO
+- Save strategy: SaveStrategy.STEPS
+2025-03-16 02:15:53,456 - INFO - Dataset loaded with 1 examples
+2025-03-16 02:15:53,456 - INFO - Dataset features: {'instructions': Value(dtype='string', id=None), 'input': Value(dtype='string', id=None), 'output': Value(dtype='string', id=None)}
+2025-03-16 02:15:53,456 - INFO - Dataset size: 1
+2025-03-16 02:15:53,456 - INFO - First example:
+2025-03-16 02:15:53,456 - INFO - {'instructions': 'Create large village', 'input': '', 'output': 'Xanadu Desert and hot enviroment'}
+2025-03-16 02:15:53,778 - INFO - Tokenizer loaded successfully
+2025-03-16 02:15:53,779 - INFO - Using device: cuda
+2025-03-16 02:15:53,779 - INFO - Total GPU memory: 15.99 GB
+2025-03-16 02:15:53,779 - INFO - Setting GPU memory limit to: 8GB
+2025-03-16 02:15:56,675 - INFO - Model loaded successfully with 4-bit quantization, LoRA adapters, and memory optimizations
+2025-03-16 02:15:56,677 - INFO - Trainable parameters: 16777216
+2025-03-16 02:15:56,677 - INFO - Total parameters: 3517190144
+2025-03-16 02:15:56,677 - INFO - Percentage of trainable parameters: 0.48%
+2025-03-16 02:15:56,677 - INFO - Starting dataset tokenization...
+2025-03-16 02:15:56,692 - ERROR - Training failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: IntervalStrategy.NO
+- Save strategy: SaveStrategy.STEPS
+2025-03-16 02:15:56,697 - ERROR - Process failed: --load_best_model_at_end requires the save and eval strategy to match, but found
+- Evaluation strategy: IntervalStrategy.NO
+- Save strategy: SaveStrategy.STEPS
+2025-03-16 02:17:49,236 - INFO - Dataset loaded with 1 examples
+2025-03-16 02:17:49,236 - INFO - Dataset features: {'instructions': Value(dtype='string', id=None), 'input': Value(dtype='string', id=None), 'output': Value(dtype='string', id=None)}
+2025-03-16 02:17:49,236 - INFO - Dataset size: 1
+2025-03-16 02:17:49,236 - INFO - First example:
+2025-03-16 02:17:49,238 - INFO - {'instructions': 'Create large village', 'input': '', 'output': 'Xanadu Desert and hot enviroment'}
+2025-03-16 02:17:49,554 - INFO - Tokenizer loaded successfully
+2025-03-16 02:17:49,555 - INFO - Using device: cuda
+2025-03-16 02:17:49,555 - INFO - Total GPU memory: 15.99 GB
+2025-03-16 02:17:49,555 - INFO - Setting GPU memory limit to: 8GB
+2025-03-16 02:17:54,799 - INFO - Model loaded successfully with 4-bit quantization, LoRA adapters, and memory optimizations
+2025-03-16 02:17:54,802 - INFO - Trainable parameters: 4194304
+2025-03-16 02:17:54,802 - INFO - Total parameters: 3504607232
+2025-03-16 02:17:54,802 - INFO - Percentage of trainable parameters: 0.12%
+2025-03-16 02:17:54,802 - INFO - Starting dataset tokenization...
+2025-03-16 02:17:54,889 - INFO - Starting training...
+2025-03-16 02:18:16,755 - INFO - Saving model and tokenizer...
+2025-03-16 02:18:17,102 - INFO - Training completed successfully

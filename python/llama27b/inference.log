@@ -1,0 +1,109 @@
+2025-03-16 02:11:01,469 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 02:11:01,469 - INFO - Loading model from ./village_finetuned_model
+2025-03-16 02:11:01,789 - INFO - Tokenizer loaded successfully
+2025-03-16 02:11:02,202 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 02:11:08,824 - INFO - Model loaded successfully with 4-bit quantization and LoRA adapters
+2025-03-16 02:11:08,825 - INFO - 
+Generating text for prompt:
+### Instruction:
+Generate a detailed, imaginative description of a quaint medieval village.
+### Input:
+Village: Eldoria
+### Response:
+
+2025-03-16 02:11:21,993 - INFO - Text generation completed in 13.17 seconds
+2025-03-16 02:11:21,993 - INFO - 
+Generating text for prompt:
+### Instruction:
+Create a village in a desert environment.
+### Input:
+Village: Sandstone Haven
+### Response:
+
+2025-03-16 02:11:36,740 - INFO - Text generation completed in 14.75 seconds
+2025-03-16 02:19:49,320 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 02:19:49,320 - INFO - Loading model from ./village_finetuned_model
+2025-03-16 02:19:49,620 - INFO - Tokenizer loaded successfully
+2025-03-16 02:19:49,995 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 02:19:54,643 - INFO - Model loaded successfully with 4-bit quantization and LoRA adapters
+2025-03-16 02:19:54,643 - INFO - 
+Generating text for prompt:
+### Instruction:
+Generate a detailed, imaginative description of a quaint medieval village. Include details about buildings, people, daily life, and the surrounding environment.
+### Input:
+Village: Eldoria
+Time: Medieval period
+Location: Valley surrounded by forests
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 02:20:23,968 - INFO - Text generation completed in 29.32 seconds
+2025-03-16 02:20:23,968 - INFO - 
+Generating text for prompt:
+### Instruction:
+Create a vivid description of a village in a desert environment. Describe the architecture, how people survive the harsh climate, and unique cultural aspects.
+### Input:
+Village: Sandstone Haven
+Climate: Hot desert
+Special feature: Built around an oasis
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 02:20:48,282 - INFO - Text generation completed in 24.31 seconds
+2025-03-16 02:20:48,282 - INFO - 
+Generating text for prompt:
+### Instruction:
+Village in the desert
+### Input:
+Village: Sandstone Haven
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 02:20:53,973 - INFO - Text generation completed in 5.69 seconds
+2025-03-16 02:20:53,973 - INFO - Results saved to response.json
+2025-03-16 02:22:19,692 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 02:22:19,692 - INFO - Loading model from ./village_finetuned_model
+2025-03-16 02:22:19,959 - INFO - Tokenizer loaded successfully
+2025-03-16 02:22:20,793 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 02:22:27,639 - INFO - Model loaded successfully with 4-bit quantization and LoRA adapters
+2025-03-16 02:22:27,639 - INFO - 
+Generating text for prompt:
+### Instruction:
+Generate a detailed, imaginative description of a quaint medieval village. Include details about buildings, people, daily life, and the surrounding environment.
+### Input:
+Village: Eldoria
+Time: Medieval period
+Location: Valley surrounded by forests
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 02:22:59,871 - INFO - Text generation completed in 32.23 seconds
+2025-03-16 02:22:59,871 - INFO - 
+Generating text for prompt:
+### Instruction:
+Create a vivid description of a village in a desert environment. Describe the architecture, how people survive the harsh climate, and unique cultural aspects.
+### Input:
+Village: Sandstone Haven
+Climate: Hot desert
+Special feature: Built around an oasis
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 02:23:27,891 - INFO - Text generation completed in 28.02 seconds
+2025-03-16 02:23:27,891 - INFO - 
+Generating text for prompt:
+### Instruction:
+Village in the desert
+### Input:
+Village: Sandstone Haven
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 02:23:33,332 - INFO - Text generation completed in 5.44 seconds
+2025-03-16 02:23:33,332 - INFO - Results saved to response.json

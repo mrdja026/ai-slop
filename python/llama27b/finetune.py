@@ -8,6 +8,7 @@ from transformers import (
     TrainerCallback,
     TrainerState
 )
+from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
 import torch
 import logging
 import os
@@ -16,6 +17,8 @@ import sys
 # Set PyTorch and CUDA memory settings
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:128,expandable_segments:True"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["LD_LIBRARY_PATH"] = "/home/mrdjan/cuda-12.1/lib64:" + os.environ.get("LD_LIBRARY_PATH", "")
+os.environ["PATH"] = "/home/mrdjan/cuda-12.1/bin:" + os.environ.get("PATH", "")
 
 # Configure logging
 try:
@@ -72,20 +75,39 @@ def initialize_model_and_tokenizer(model_name):
             max_memory = {0: "8GB"}  # Reduced to 8GB
             logging.info(f"Setting GPU memory limit to: {max_memory[0]}")
         
-        # Load model with 8-bit quantization
+        # Load model with 4-bit quantization
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
-            torch_dtype=torch.float16,  # Changed to float16 for better compatibility
+            torch_dtype=torch.float16,
             device_map={"": 0},
             max_memory=max_memory,
-            load_in_8bit=True,  # Use 8-bit quantization instead
+            load_in_4bit=True,  # Changed to 4-bit
+            bnb_4bit_quant_type="nf4",  # Using nf4 format for better quality
+            bnb_4bit_compute_dtype=torch.float16,
+            bnb_4bit_use_double_quant=True,  # Further memory savings
             low_cpu_mem_usage=True
         )
+        
+        # Prepare model for k-bit training
+        model = prepare_model_for_kbit_training(model)
+        
+        # Define LoRA Config for 4-bit training
+        lora_config = LoraConfig(
+            r=8,  # Reduced for 4-bit
+            lora_alpha=16,
+            target_modules=["q_proj", "v_proj"],
+            lora_dropout=0.05,
+            bias="none",
+            task_type="CAUSAL_LM"
+        )
+        
+        # Get PEFT model
+        model = get_peft_model(model, lora_config)
         
         # Enable memory optimizations
         model.gradient_checkpointing_enable()
         model.config.use_cache = False
-        logging.info("Model loaded successfully with 8-bit quantization and memory optimizations")
+        logging.info("Model loaded successfully with 4-bit quantization, LoRA adapters, and memory optimizations")
         
         return tokenizer, model
     except OSError as e:
@@ -138,11 +160,18 @@ def main():
         model_name = "NousResearch/Llama-2-7b-chat-hf"
         tokenizer, model = initialize_model_and_tokenizer(model_name)
         
+        # Print trainable parameters info
+        trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
+        total_params = sum(p.numel() for p in model.parameters())
+        logging.info(f"Trainable parameters: {trainable_params}")
+        logging.info(f"Total parameters: {total_params}")
+        logging.info(f"Percentage of trainable parameters: {100 * trainable_params / total_params:.2f}%")
+        
         # Tokenize dataset
         logging.info("Starting dataset tokenization...")
         tokenized_dataset = dataset.map(
             lambda x: tokenize_function(x, tokenizer),
-            batched=False,  # Process one example at a time
+            batched=False,
             remove_columns=dataset.column_names,
             desc="Tokenizing dataset"
         )
@@ -159,7 +188,7 @@ def main():
             learning_rate=2e-4,
             logging_steps=10,
             save_steps=50,
-            fp16=True,  # Changed to fp16 to match model dtype
+            fp16=True,
             gradient_checkpointing=True,
             optim="adamw_torch",
             max_grad_norm=0.3,
