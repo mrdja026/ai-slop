@@ -1,5 +1,7 @@
 # Testing Lallama 7B Models for general GEN AI
 
+
+
 ## TODO
 
 file structure and how to install
@@ -8,8 +10,11 @@ ssh auto start in vm -.-
 ## Two point aproach
 
  - [X] Master prompt template without fine tuning
+        - Instruction Prompting: Explicitly separating system instructions, user input, and constraints.
+        - Llama-2 Chat Format: Uses [INST] and <<SYS>> tags to denote conversational roles (ref).
  - [X] Fine tuning with with limited data tests
-    - in poggers
+        - Random data can be seen
+        - Worked 1 h on 7B params quant 4
 
 
 ## Compare perfs, quants and check lower models

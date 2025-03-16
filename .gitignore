@@ -1,3 +1,4 @@
 node_modules/
 .vscode/
 python/llama27b/village_finetuned_model/
+python/image-generation/outputs/
