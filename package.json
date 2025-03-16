@@ -1,0 +1,20 @@
+{
+  "name": "standard-llama-7b-general",
+  "version": "0.0.1",
+  "description": "Standard Lama 7B Testing ",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start-ts": "ts-node index.ts"
+  },
+  "keywords": [
+    "MIT"
+  ],
+  "author": "Mrdjan Stajic",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.3"
+  }
+}
