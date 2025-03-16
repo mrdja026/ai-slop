@@ -9,8 +9,9 @@ import json
 from pathlib import Path
 from diffusers import StableDiffusionPipeline
 
-# Set PyTorch memory allocation configuration
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512,expandable_segments:True"
+# Set PyTorch memory allocation configuration for WSL2
+os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
+torch.cuda.set_per_process_memory_fraction(0.95)  # Use 95% of available GPU memory
 
 # Configure logging
 logging.basicConfig(
@@ -64,9 +65,9 @@ def clear_gpu_memory():
     logger.info("GPU memory cleared")
 
 def setup_pipeline(model_id: str):
-    """Setup the SDXL pipeline with optimizations for limited VRAM."""
+    """Setup the pipeline with optimizations for WSL2 environment."""
     import torch
-    from diffusers import StableDiffusionPipeline  # Using standard SD instead of SDXL for lower VRAM
+    from diffusers import StableDiffusionPipeline
 
     logger.info("Setting up pipeline...")
     try:
@@ -80,23 +81,25 @@ def setup_pipeline(model_id: str):
         # Get available VRAM and set limit before model loading
         gpu_memory = torch.cuda.get_device_properties(0).total_memory / 1024**3
         logger.info(f"Available GPU memory: {gpu_memory:.2f} GB")
+        logger.info("Using WSL2 environment - optimizing for GPU-only processing")
 
-        # Set memory efficient settings
+        # WSL2 optimized settings
         torch.backends.cudnn.benchmark = False  # Disable for stability
         torch.backends.cuda.matmul.allow_tf32 = True
         torch.backends.cudnn.allow_tf32 = True
 
-        # Load pipeline with optimizations
+        # Load smaller model with optimizations
         pipe = StableDiffusionPipeline.from_pretrained(
-            "runwayml/stable-diffusion-v1-5",  # Using SD 1.5 instead of SDXL
+            "CompVis/stable-diffusion-v1-4",  # Smaller model than SDXL
             torch_dtype=torch.float16,
+            revision="fp16",
             safety_checker=None,
             requires_safety_checker=False
-        )
+        ).to("cuda")
 
         # Memory optimizations
-        pipe.enable_attention_slicing()
-        pipe = pipe.to("cuda")
+        pipe.enable_attention_slicing(slice_size="auto")
+        pipe.enable_vae_tiling()
 
         logger.info("Pipeline setup completed successfully")
         return pipe
@@ -112,7 +115,7 @@ def generate_image(
     output_file: str,
     num_steps: int = 30,
     guidance_scale: float = 7.5,
-    size: tuple = (512, 512)  # Reduced size
+    size: tuple = (768, 512)
 ):
     """Generate image with error handling and progress logging."""
     try:
@@ -120,11 +123,8 @@ def generate_image(
         logger.info(f"Prompt: {prompt}")
         logger.info(f"Settings: {num_steps} steps, {guidance_scale} guidance scale, {size} resolution")
 
-        # Clear GPU memory before generation
-        clear_gpu_memory()
-
-        # Generate image
-        with torch.inference_mode():  # Removed autocast for stability
+        # Generate image with optimized settings
+        with torch.inference_mode():
             result = pipe(
                 prompt=prompt,
                 negative_prompt=negative_prompt,
@@ -138,9 +138,6 @@ def generate_image(
                 raise RuntimeError("No image was generated")
 
             image = result.images[0]
-
-        # Clear GPU memory after generation
-        clear_gpu_memory()
 
         # Create output directory if it doesn't exist
         output_dir = os.path.dirname(output_file)
@@ -181,7 +178,7 @@ def count_tokens(text: str) -> int:
 def create_prompt_from_response(response: str) -> str:
     """Create a focused prompt directly from the response text."""
     # Standard suffix we'll always add
-    suffix = " Create a beautiful, detailed landscape. Trending on ArtStation, highly detailed, sharp focus, 8k resolution, cinematic lighting, professional photography, masterpiece"
+    suffix = " Create a beautiful, top down view of a of a willage. Trending on ArtStation, highly detailed, sharp focus,cartoon style"
     suffix_tokens = count_tokens(suffix)
 
     # Take sentences until we hit the token limit
@@ -222,7 +219,7 @@ def batch_generate_images(response_dir: str, output_dir: str = "outputs/generate
         os.makedirs(output_dir, exist_ok=True)
 
         # Setup pipeline once for all generations
-        pipe = setup_pipeline("runwayml/stable-diffusion-v1-5")
+        pipe = setup_pipeline("CompVis/stable-diffusion-v1-4")  # Using smaller model
 
         # Get all JSON files in the directory
         json_files = sorted([f for f in os.listdir(response_dir) if f.endswith('.json')])
@@ -244,11 +241,9 @@ def batch_generate_images(response_dir: str, output_dir: str = "outputs/generate
                 # Extract responses based on file structure
                 if isinstance(data, dict):
                     if "response" in data:
-                        # Single response format
                         responses.append(data["response"])
                         logger.info("Found single response format")
                     elif "generations" in data:
-                        # Multiple generations format
                         for gen in data["generations"]:
                             if isinstance(gen, dict) and "response" in gen:
                                 responses.append(gen["response"])
@@ -261,19 +256,16 @@ def batch_generate_images(response_dir: str, output_dir: str = "outputs/generate
                 # Generate image for each response
                 total_responses = len(responses)
                 for idx, response in enumerate(responses, 1):
-                    # Skip empty responses
                     if not response or not response.strip():
                         logger.warning(f"Skipping empty response {idx}/{total_responses}")
                         continue
 
                     logger.info(f"\nProcessing response {idx}/{total_responses} from {json_file}")
 
-                    # Create prompt from response
                     prompt = create_prompt_from_response(response)
                     token_count = count_tokens(prompt)
                     logger.info(f"Generated prompt ({token_count} tokens): {prompt[:100]}...")
 
-                    # Generate unique output filename
                     base_name = os.path.splitext(json_file)[0]
                     if len(responses) > 1:
                         output_file = os.path.join(output_dir, f"{base_name}_response_{idx}.png")
@@ -282,17 +274,16 @@ def batch_generate_images(response_dir: str, output_dir: str = "outputs/generate
 
                     logger.info(f"Generating image: {output_file}")
 
-                    # Set negative prompt
-                    negative_prompt = "blurry, low quality, distorted, deformed, disfigured, bad anatomy, ugly, duplicate, error, text, watermark, signature, out of frame, extra fingers, mutated hands, monochrome, grainy"
+                    negative_prompt = "blurry, low quality, distorted, deformed, disfigured, bad anatomy, ugly, duplicate, error"
 
                     generate_image(
                         pipe=pipe,
                         prompt=prompt,
                         negative_prompt=negative_prompt,
                         output_file=output_file,
-                        num_steps=30,
-                        guidance_scale=7.5,
-                        size=(512, 512)
+                        num_steps=30,  # Reduced steps
+                        guidance_scale=7.5,  # Standard guidance
+                        size=(768, 512)  # Smaller size
                     )
 
                     logger.info(f"Completed response {idx}/{total_responses} from {json_file}")

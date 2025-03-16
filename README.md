@@ -21,8 +21,11 @@ ssh auto start in vm -.-
 
 - [x] Basic image generation
        - Stable fusion implementation
+              - [x] need more resources
        - Example outputs:
          ![Generated Landscape](assets/response-agent_20250316_141258_intermediate_response_2_20250316_151036.png)
+         ![Generated Landscape](assets/response-agent_20250316_141418_final_response_9_20250316_152549.png)
+         ![Generated Landscape](assets/response-agent_20250316_141418_final_response_9_20250316_154721.png)
 
 
 
