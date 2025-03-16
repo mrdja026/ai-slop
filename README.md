@@ -1,6 +1,19 @@
 # Testing Lallama 7B Models for general GEN AI
 
-
+## General info
+  - Coding on WSL2 and setting up limits the hardware since sharing of resources is hard
+  - 7b llama chat models provide decent results q 4 
+  - Tokenisation must be looked upon since it sometimes excededs the window
+  - Proper data extraction
+  - To get more productive results to analyze data must not be hardcoded 
+	- Ways of prompting must be tested 
+		- Instruction VS Chat normal
+  - Proper sys message must be used
+      - Assume a role of "DM" "Player"
+      - Build a Town "Willage"
+      - Optional constraints
+      - Optional style
+      - Etc
 
 ## TODO
 
