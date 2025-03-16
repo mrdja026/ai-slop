@@ -15,6 +15,16 @@ ssh auto start in vm -.-
  - [X] Fine tuning with with limited data tests
         - Random data can be seen
         - Worked 1 h on 7B params quant 4
+        - Terminal outputs:
+         ![Terminal Output 1](assets/WindowsTerminal_UGAFiQrieg.png)
+         ![Terminal Output 2](assets/WindowsTerminal_4UI7gIJgQx.png)
+
+- [x] Basic image generation
+       - Stable fusion implementation
+       - Example outputs:
+         ![Generated Landscape](assets/response-agent_20250316_141258_intermediate_response_2_20250316_151036.png)
+
+
 
 
 ## Compare perfs, quants and check lower models
