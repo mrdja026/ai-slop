@@ -107,3 +107,46 @@ Let me describe this village in detail:
 
 2025-03-16 02:23:33,332 - INFO - Text generation completed in 5.44 seconds
 2025-03-16 02:23:33,332 - INFO - Results saved to response.json
+2025-03-16 03:04:27,224 - INFO - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-16 03:04:27,224 - INFO - Loading model from ./village_finetuned_model
+2025-03-16 03:04:31,315 - INFO - Tokenizer loaded successfully
+2025-03-16 03:04:31,642 - INFO - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-16 03:04:32,716 - INFO - Model loaded successfully with 4-bit quantization and LoRA adapters
+2025-03-16 03:04:32,717 - INFO - 
+Generating text for prompt:
+### Instruction:
+Generate a detailed, imaginative description of a quaint medieval village. Include details about buildings, people, daily life, and the surrounding environment.
+### Input:
+Village: Eldoria
+Time: Medieval period
+Location: Valley surrounded by forests
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 03:05:02,337 - INFO - Text generation completed in 29.62 seconds
+2025-03-16 03:05:02,337 - INFO - 
+Generating text for prompt:
+### Instruction:
+Create a vivid description of a village in a desert environment. Describe the architecture, how people survive the harsh climate, and unique cultural aspects.
+### Input:
+Village: Sandstone Haven
+Climate: Hot desert
+Special feature: Built around an oasis
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 03:05:28,083 - INFO - Text generation completed in 25.75 seconds
+2025-03-16 03:05:28,083 - INFO - 
+Generating text for prompt:
+### Instruction:
+Village in the desert
+### Input:
+Village: Sandstone Haven
+### Response:
+Let me describe this village in detail:
+
+
+2025-03-16 03:05:33,753 - INFO - Text generation completed in 5.67 seconds
+2025-03-16 03:05:33,754 - INFO - Results saved to response.json

@@ -366,3 +366,20 @@
 2025-03-16 02:17:54,889 - INFO - Starting training...
 2025-03-16 02:18:16,755 - INFO - Saving model and tokenizer...
 2025-03-16 02:18:17,102 - INFO - Training completed successfully
+2025-03-16 02:31:53,811 - INFO - Dataset loaded with 100 examples
+2025-03-16 02:31:53,811 - INFO - Dataset features: {'instructions': Value(dtype='string', id=None), 'input': Value(dtype='string', id=None), 'output': Value(dtype='string', id=None)}
+2025-03-16 02:31:53,811 - INFO - Dataset size: 100
+2025-03-16 02:31:53,811 - INFO - First example:
+2025-03-16 02:31:53,811 - INFO - {'instructions': 'Create large village', 'input': '', 'output': 'Xanadu Desert and hot enviroment'}
+2025-03-16 02:31:54,150 - INFO - Tokenizer loaded successfully
+2025-03-16 02:31:54,150 - INFO - Using device: cuda
+2025-03-16 02:31:54,150 - INFO - Total GPU memory: 15.99 GB
+2025-03-16 02:31:54,150 - INFO - Setting GPU memory limit to: 8GB
+2025-03-16 02:32:01,287 - INFO - Model loaded successfully with 4-bit quantization, LoRA adapters, and memory optimizations
+2025-03-16 02:32:01,289 - INFO - Trainable parameters: 4194304
+2025-03-16 02:32:01,289 - INFO - Total parameters: 3504607232
+2025-03-16 02:32:01,289 - INFO - Percentage of trainable parameters: 0.12%
+2025-03-16 02:32:01,289 - INFO - Starting dataset tokenization...
+2025-03-16 02:32:01,391 - INFO - Starting training...
+2025-03-16 03:04:03,607 - INFO - Saving model and tokenizer...
+2025-03-16 03:04:03,969 - INFO - Training completed successfully

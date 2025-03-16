@@ -1,9 +1,9 @@
 from datasets import load_dataset
 from transformers import (
-    AutoTokenizer, 
-    AutoModelForCausalLM, 
-    TrainingArguments, 
-    Trainer, 
+    AutoTokenizer,
+    AutoModelForCausalLM,
+    TrainingArguments,
+    Trainer,
     DataCollatorForLanguageModeling,
     TrainerCallback,
     TrainerState
@@ -54,27 +54,27 @@ def initialize_model_and_tokenizer(model_name):
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
             torch.cuda.reset_peak_memory_stats()
-        
+
         tokenizer = AutoTokenizer.from_pretrained(
-            model_name, 
+            model_name,
             trust_remote_code=True,
             use_fast=True
         )
         logging.info("Tokenizer loaded successfully")
-        
+
         # Check if CUDA is available
         device = "cuda" if torch.cuda.is_available() else "cpu"
         logging.info(f"Using device: {device}")
-        
+
         # Get GPU memory info
         if torch.cuda.is_available():
             gpu_memory = torch.cuda.get_device_properties(0).total_memory / 1024**3
             logging.info(f"Total GPU memory: {gpu_memory:.2f} GB")
-            
+
             # Set very conservative GPU memory limit
             max_memory = {0: "8GB"}  # Reduced to 8GB
             logging.info(f"Setting GPU memory limit to: {max_memory[0]}")
-        
+
         # Load model with 4-bit quantization
         model = AutoModelForCausalLM.from_pretrained(
             model_name,
@@ -87,10 +87,10 @@ def initialize_model_and_tokenizer(model_name):
             bnb_4bit_use_double_quant=True,  # Further memory savings
             low_cpu_mem_usage=True
         )
-        
+
         # Prepare model for k-bit training
         model = prepare_model_for_kbit_training(model)
-        
+
         # Define LoRA Config for 4-bit training
         lora_config = LoraConfig(
             r=8,  # Reduced for 4-bit
@@ -100,15 +100,15 @@ def initialize_model_and_tokenizer(model_name):
             bias="none",
             task_type="CAUSAL_LM"
         )
-        
+
         # Get PEFT model
         model = get_peft_model(model, lora_config)
-        
+
         # Enable memory optimizations
         model.gradient_checkpointing_enable()
         model.config.use_cache = False
         logging.info("Model loaded successfully with 4-bit quantization, LoRA adapters, and memory optimizations")
-        
+
         return tokenizer, model
     except OSError as e:
         logging.error(f"Failed to download or load model/tokenizer: {e}")
@@ -125,10 +125,10 @@ def tokenize_function(example, tokenizer):
         if not isinstance(example['instructions'], str):
             logging.error(f"Invalid data type - instructions: {type(example['instructions'])}")
             raise ValueError("Instructions is not a string")
-            
+
         # Simplified prompt format
         full_text = f"### Instruction: {example['instructions']}\n### Response: {example.get('output', '')}"
-        
+
         tokens = tokenizer(
             full_text,
             truncation=True,
@@ -136,10 +136,10 @@ def tokenize_function(example, tokenizer):
             padding=False,
             return_tensors=None
         )
-        
+
         if not tokens or len(tokens['input_ids']) == 0:
             raise ValueError("Tokenization produced empty output")
-            
+
         return tokens
     except Exception as e:
         logging.error(f"Tokenization error for example: {str(e)}")
@@ -149,24 +149,24 @@ def main():
     try:
         # Load dataset
         dataset = load_dataset_safely()
-        
+
         # Print dataset info
         logging.info(f"Dataset features: {dataset.features}")
         logging.info(f"Dataset size: {len(dataset)}")
         logging.info("First example:")
         logging.info(dataset[0])
-        
+
         # Initialize model and tokenizer
         model_name = "NousResearch/Llama-2-7b-chat-hf"
         tokenizer, model = initialize_model_and_tokenizer(model_name)
-        
+
         # Print trainable parameters info
         trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
         total_params = sum(p.numel() for p in model.parameters())
         logging.info(f"Trainable parameters: {trainable_params}")
         logging.info(f"Total parameters: {total_params}")
         logging.info(f"Percentage of trainable parameters: {100 * trainable_params / total_params:.2f}%")
-        
+
         # Tokenize dataset
         logging.info("Starting dataset tokenization...")
         tokenized_dataset = dataset.map(
@@ -175,11 +175,11 @@ def main():
             remove_columns=dataset.column_names,
             desc="Tokenizing dataset"
         )
-        
+
         # Setup training
         output_dir = "./village_finetuned_model"
         os.makedirs(output_dir, exist_ok=True)
-        
+
         training_args = TrainingArguments(
             output_dir=output_dir,
             num_train_epochs=3,
@@ -204,7 +204,7 @@ def main():
             group_by_length=True,
             length_column_name="length"
         )
-        
+
         # Initialize trainer
         trainer = Trainer(
             model=model,
@@ -212,17 +212,17 @@ def main():
             train_dataset=tokenized_dataset,
             data_collator=DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
         )
-        
+
         # Train
         logging.info("Starting training...")
         trainer.train()
-        
+
         # Save results
         logging.info("Saving model and tokenizer...")
         trainer.save_model(output_dir)
         tokenizer.save_pretrained(output_dir)
         logging.info("Training completed successfully")
-        
+
     except KeyboardInterrupt:
         logging.warning("Training was interrupted by user")
         # Optionally save checkpoint here
