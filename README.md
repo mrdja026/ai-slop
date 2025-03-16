@@ -3,6 +3,7 @@
 ## TODO
 
 file structure and how to install
+ssh auto start in vm -.-
 
 ## Two point aproach
 
