@@ -2,11 +2,11 @@
 
 ## General info
   - Coding on WSL2 and setting up limits the hardware since sharing of resources is hard
-  - 7b llama chat models provide decent results q 4 
+  - 7b llama chat models provide decent results q 4
   - Tokenisation must be looked upon since it sometimes excededs the window
   - Proper data extraction
-  - To get more productive results to analyze data must not be hardcoded 
-	- Ways of prompting must be tested 
+  - To get more productive results to analyze data must not be hardcoded
+	- Ways of prompting must be tested
 		- Instruction VS Chat normal
   - Proper sys message must be used
       - Assume a role of "DM" "Player"
@@ -15,7 +15,19 @@
       - Optional style
       - Etc
 
-## TODO
+
+# TODO
+ - Understand slop
+ - Deprecation warnings
+ - linters
+ - TYPOS
+ - short prompts [village,weather,3 words max]
+       - Data to be reasonable
+              - Some sort of gramapthics what is allowed in what combination for fine tuning or Instruction prompting, neki automat
+ - API
+ - Client
+ - Maintainece of requqiments.txt
+ - check meta access of lama models for chat
 
 file structure and how to install
 ssh auto start in vm -.-
@@ -59,13 +71,3 @@ ssh auto start in vm -.-
     - data extraction TBD
 - TODO :/ create requqiments.txt
 - TBD://Copy paste instructions that work
-
-
-# TODO
- - Understand slop
- - TYPOS
- - short prompts [village,weather,3 words max]
- - API
- - Client
- - Maintainece of requqiments.txt
- - check meta access of lama models for chat
