@@ -1,0 +1,468 @@
+2025-03-17 18:16:36,093 - INFO - Installing PyTorch...
+2025-03-17 18:16:36,893 - INFO - Installing other dependencies...
+2025-03-17 18:16:40,150 - INFO - All dependencies installed successfully
+2025-03-17 18:16:40,150 - INFO - Setting up pipeline...
+2025-03-17 18:16:40,196 - INFO - GPU memory cleared
+2025-03-17 18:16:40,197 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:16:40,197 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:16:41,969 - INFO - Pipeline setup completed successfully
+2025-03-17 18:16:41,969 - INFO - Starting image generation...
+2025-03-17 18:16:41,969 - INFO - Prompt: A beautiful mountain village with ancient architecture
+2025-03-17 18:16:41,969 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:16:44,909 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/llama7b-chat/../image-generation/outputs/generated_images/generated_20250317_181633_20250317_181644.png
+2025-03-17 18:16:44,964 - INFO - GPU memory cleared
+2025-03-17 18:16:45,011 - INFO - GPU memory cleared
+2025-03-17 18:17:58,919 - INFO - Installing PyTorch...
+2025-03-17 18:17:59,773 - INFO - Installing other dependencies...
+2025-03-17 18:18:03,017 - INFO - All dependencies installed successfully
+2025-03-17 18:18:03,017 - INFO - Setting up pipeline...
+2025-03-17 18:18:03,072 - INFO - GPU memory cleared
+2025-03-17 18:18:03,073 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:18:03,073 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:18:05,295 - INFO - Pipeline setup completed successfully
+2025-03-17 18:18:05,296 - INFO - Starting image generation...
+2025-03-17 18:18:05,296 - INFO - Prompt: A beautiful mountain village with ancient architecture
+2025-03-17 18:18:05,296 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:18:05,296 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/llama7b-chat/../image-generation/outputs/generated_images/generated_20250317_181755.png
+2025-03-17 18:18:08,547 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/llama7b-chat/../image-generation/outputs/generated_images/generated_20250317_181755.png
+2025-03-17 18:18:08,609 - INFO - GPU memory cleared
+2025-03-17 18:18:08,660 - INFO - GPU memory cleared
+2025-03-17 18:21:22,983 - INFO - Installing PyTorch...
+2025-03-17 18:21:23,859 - INFO - Installing other dependencies...
+2025-03-17 18:21:27,098 - INFO - All dependencies installed successfully
+2025-03-17 18:21:27,099 - INFO - Setting up pipeline...
+2025-03-17 18:21:27,150 - INFO - GPU memory cleared
+2025-03-17 18:21:27,150 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:21:27,150 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:21:29,037 - INFO - Pipeline setup completed successfully
+2025-03-17 18:21:29,037 - INFO - Starting image generation...
+2025-03-17 18:21:29,037 - INFO - Prompt: A beautiful mountain village with ancient architecture, japanese style, cherry blossoms, detailed landscape
+2025-03-17 18:21:29,037 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:21:29,037 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_182120.png
+2025-03-17 18:21:32,235 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_182120.png
+2025-03-17 18:21:32,275 - INFO - Image converted to base64
+2025-03-17 18:21:32,336 - INFO - GPU memory cleared
+2025-03-17 18:21:32,386 - INFO - GPU memory cleared
+2025-03-17 18:23:14,225 - INFO - Installing PyTorch...
+2025-03-17 18:23:15,064 - INFO - Installing other dependencies...
+2025-03-17 18:23:19,974 - INFO - All dependencies installed successfully
+2025-03-17 18:23:19,974 - INFO - Setting up pipeline...
+2025-03-17 18:23:20,030 - INFO - GPU memory cleared
+2025-03-17 18:23:20,030 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:23:20,030 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:23:21,904 - INFO - Pipeline setup completed successfully
+2025-03-17 18:23:21,904 - INFO - Starting image generation...
+2025-03-17 18:23:21,904 - INFO - Prompt: You find yourself in a barren wasteland, the landscape stretching out before you like an endless ocean of sand. The sun beats down relentlessly, casting harsh shadows and highlighting the desolation around you. In this place, there is no respite from the heat, no shelter from the glare. It is a barren land, devoid of life or hope.
+
+As you venture deeper into this unforgiving environment, you begin to notice strange formations in the ground. The sand seems to shift and swirl around these structures, as if they are alive, pulsing with an otherworldly energy. You can feel the power emanating from them, a raw and primal force that threatens to consume everything in its path.
+
+You approach one of these formations cautiously, your heart pounding in your chest. It resembles a massive stone pedestal, covered in strange symbols and markings that seem to glow with an ethereal light. As you draw closer, you can feel the power emanating from it growing stronger, until you are surrounded by an aura of raw energy.
+
+Suddenly, a figure materializes before you. It is a woman, tall and imposing, with long black hair that cascades down her back like a waterfall of night. Her eyes glow with an inner light, illuminating the darkness around her. She gazes at you with a piercing intensity, as if reading your very soul.
+
+"Who are you?" she demands in a voice that echoes through the barren landscape like thunder. "What brings you to this place of desolation?"
+
+You can choose to:
+A) Introduce yourself and explain your purpose
+B) Attack her with your weapon
+C) Try to sneak past her
+D) Use magic to communicate with her
+E) Turn back and explore other paths
+2025-03-17 18:23:21,904 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:23:21,904 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_182311.png
+2025-03-17 18:23:25,089 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_182311.png
+2025-03-17 18:23:25,157 - INFO - Image converted to base64
+2025-03-17 18:23:25,220 - INFO - GPU memory cleared
+2025-03-17 18:23:25,271 - INFO - GPU memory cleared
+2025-03-17 18:26:04,563 - INFO - Installing PyTorch...
+2025-03-17 18:26:05,434 - INFO - Installing other dependencies...
+2025-03-17 18:26:10,388 - INFO - All dependencies installed successfully
+2025-03-17 18:26:10,388 - INFO - Setting up pipeline...
+2025-03-17 18:26:10,438 - INFO - GPU memory cleared
+2025-03-17 18:26:10,438 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:26:10,438 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:26:12,280 - INFO - Pipeline setup completed successfully
+2025-03-17 18:26:12,280 - INFO - Starting image generation...
+2025-03-17 18:26:12,280 - INFO - Prompt: Sure, here is a 3-word image description of a village:
+
+Idyllic hamlet nestled hills
+2025-03-17 18:26:12,280 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:26:12,280 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_182601.png
+2025-03-17 18:26:15,473 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_182601.png
+2025-03-17 18:26:15,515 - INFO - Image converted to base64
+2025-03-17 18:26:15,580 - INFO - GPU memory cleared
+2025-03-17 18:26:15,631 - INFO - GPU memory cleared
+2025-03-17 18:30:42,100 - INFO - Installing PyTorch...
+2025-03-17 18:30:42,974 - INFO - Installing other dependencies...
+2025-03-17 18:30:46,200 - INFO - All dependencies installed successfully
+2025-03-17 18:30:46,200 - INFO - Setting up pipeline...
+2025-03-17 18:30:46,251 - INFO - GPU memory cleared
+2025-03-17 18:30:46,251 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:30:46,251 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:30:48,186 - INFO - Pipeline setup completed successfully
+2025-03-17 18:30:48,186 - INFO - Starting image generation...
+2025-03-17 18:30:48,186 - INFO - Prompt: Arthur the Lousy is a mysterious figure that resides in these dark mountains. Little is known about him, as he keeps to himself and rarely interacts with outsiders. However, those who have stumbled upon him know that he has an unnatural obsession with potatoes. It's said that he spends most of his days holed up in a small cave, surrounded by bags of the yellow tubers.
+
+Despite his love for potatoes, Arthur is not one to be underestimated. He's a skilled fighter and has been known to take down even the toughest foes with ease. His moves are quick and unpredictable, leaving his opponents off-balance and disoriented. It's almost as if he has an uncanny ability to anticipate their every move before they even make it.
+
+When he does attack, Arthur lets out a low growl that send chills down the spines of those nearby. His eyes seem to glow with an otherworldly intensity, as if fueled by some dark power deep within the mountains themselves.
+
+Despite his fearsome reputation, Arthur seems to have no interest in causing harm to others. He's simply content with living out his days in solitude, surrounded by his beloved potatoes. It's almost as if he's a guardian of sorts, protecting these mountains and all its secrets from those who would seek to exploit them.
+
+As you make your way through the darkness, Arthur's figure looms large before you. His eyes glow bright red in the dim light, piercing through the shadows like a beacon of malice. You can almost feel the ground trembling beneath your feet as he prepares to strike. Will you stand your ground against this mysterious foe, or will you turn tail and run for the safety of the surface world? The choice is yours...
+2025-03-17 18:30:48,186 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:30:48,186 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183037.png
+2025-03-17 18:30:51,295 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183037.png
+2025-03-17 18:30:51,346 - INFO - Image converted to base64
+2025-03-17 18:30:51,411 - INFO - GPU memory cleared
+2025-03-17 18:30:51,466 - INFO - GPU memory cleared
+2025-03-17 18:31:05,557 - INFO - Installing PyTorch...
+2025-03-17 18:31:06,308 - INFO - Installing other dependencies...
+2025-03-17 18:31:09,560 - INFO - All dependencies installed successfully
+2025-03-17 18:31:09,560 - INFO - Setting up pipeline...
+2025-03-17 18:31:09,615 - INFO - GPU memory cleared
+2025-03-17 18:31:09,615 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:31:09,615 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:31:10,935 - INFO - Pipeline setup completed successfully
+2025-03-17 18:31:10,935 - INFO - Starting image generation...
+2025-03-17 18:31:10,935 - INFO - Prompt: Arthur the Lousy is a mysterious figure that resides in these dark mountains. Little is known about him, as he keeps to himself and rarely interacts with outsiders. However, those who have stumbled upon him know that he has an unnatural obsession with potatoes. It's said that he spends most of his days holed up in a small cave, surrounded by bags of the yellow tubers.
+
+Despite his love for potatoes, Arthur is not one to be underestimated. He's a skilled fighter and has been known to take down even the toughest foes with ease. His moves are quick and unpredictable, leaving his opponents off-balance and disoriented. It's almost as if he has an uncanny ability to anticipate their every move before they even make it.
+
+When he does attack, Arthur lets out a low growl that send chills down the spines of those nearby. His eyes seem to glow with an otherworldly intensity, as if fueled by some dark power deep within the mountains themselves.
+
+Despite his fearsome reputation, Arthur seems to have no interest in causing harm to others. He's simply content with living out his days in solitude, surrounded by his beloved potatoes. It's almost as if he's a guardian of sorts, protecting these mountains and all its secrets from those who would seek to exploit them.
+
+As you make your way through the darkness, Arthur's figure looms large before you. His eyes glow bright red in the dim light, piercing through the shadows like a beacon of malice. You can almost feel the ground trembling beneath your feet as he prepares to strike. Will you stand your ground against this mysterious foe, or will you turn tail and run for the safety of the surface world? The choice is yours...
+2025-03-17 18:31:10,935 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:31:10,935 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183103.png
+2025-03-17 18:31:15,523 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183103.png
+2025-03-17 18:31:15,581 - INFO - Image converted to base64
+2025-03-17 18:31:15,649 - INFO - GPU memory cleared
+2025-03-17 18:31:15,706 - INFO - GPU memory cleared
+2025-03-17 18:31:21,893 - INFO - Installing PyTorch...
+2025-03-17 18:31:22,645 - INFO - Installing other dependencies...
+2025-03-17 18:31:25,893 - INFO - All dependencies installed successfully
+2025-03-17 18:31:25,893 - INFO - Setting up pipeline...
+2025-03-17 18:31:25,947 - INFO - GPU memory cleared
+2025-03-17 18:31:25,947 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:31:25,947 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:31:27,308 - INFO - Pipeline setup completed successfully
+2025-03-17 18:31:27,308 - INFO - Starting image generation...
+2025-03-17 18:31:27,308 - INFO - Prompt: As you step into the Forest, the air is alive with the whispers of ancient magic. The trees tower above you, their trunks thick and gnarled, their leaves a vibrant green that seems to shift and shimmer in the flickering sunlight filtering through the canopy. The forest floor is blanketed with a soft layer of moss and ferns, and the scent of damp earth and decaying leaves hangs heavy in the air.
+
+As you make your way deeper into the Forest, you notice that the trees are becoming more twisted and gnarled, their branches reaching out like grasping fingers. The magic emanating from this place is palpable, and you can feel it seeping into your bones. You begin to sense that you are being watched, and the hairs on the back of your neck stand on end.
+
+Suddenly, a figure emerges from the shadows. It is an old man with wild eyes and a long white beard, dressed in tattered robes that seem to blend seamlessly into the darkness. He regards you with a piercing gaze, his fingers twitching as if they are conjuring spells of their own.
+
+"Who dares to enter this sacred place?" he croaks in a voice like a rusty gate. "Leave now, or face the consequences!"
+
+What will you do?
+2025-03-17 18:31:27,308 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:31:27,308 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183120.png
+2025-03-17 18:31:30,268 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183120.png
+2025-03-17 18:31:30,308 - INFO - Image converted to base64
+2025-03-17 18:31:30,372 - INFO - GPU memory cleared
+2025-03-17 18:31:30,422 - INFO - GPU memory cleared
+2025-03-17 18:33:26,715 - INFO - Installing PyTorch...
+2025-03-17 18:33:27,555 - INFO - Installing other dependencies...
+2025-03-17 18:33:32,579 - INFO - All dependencies installed successfully
+2025-03-17 18:33:32,579 - INFO - Setting up pipeline...
+2025-03-17 18:33:32,635 - INFO - GPU memory cleared
+2025-03-17 18:33:32,635 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:33:32,635 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:33:34,543 - INFO - Pipeline setup completed successfully
+2025-03-17 18:33:34,543 - INFO - Starting image generation...
+2025-03-17 18:33:34,543 - INFO - Prompt: As you step into the forest, the air is thick with magic. The trees tower above you, their trunks wide and gnarled, their branches twisted and knotted with age. The canopy overhead is a tangle of leaves and vines, casting dappled shadows across the forest floor.
+
+You notice an ancient-looking portal framed by two massive stone pillars, covered in moss and lichen. The portal seems to pulse with a faint, ethereal light, as if inviting you to step through it.
+
+Suddenly, a figure emerges from the shadows. It's Arthur, an old and wise magician who has lived in these woods for centuries. He is dressed in long robes that are frayed at the edges, and his white beard reaches down to his waist. His eyes gleam with a knowing light as he regards you.
+
+"Ah, another seeker of magic," Arthur says in a low, rumbling voice. "I have been waiting for you. Come closer, young one."
+
+He gestures to the portal. "That is the entrance to the Heartwood, a place of ancient power and magic. But be warned, it is not a place for the faint of heart. The forest has many secrets, and some are best left unspoken."
+
+Arthur eyes you intently. "You have a choice to make. Will you step through the portal and embrace the magic of the Heartwood, or will you turn back and leave these woods behind?"
+2025-03-17 18:33:34,543 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:33:34,543 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183323.png
+2025-03-17 18:33:37,676 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183323.png
+2025-03-17 18:33:37,711 - INFO - Image converted to base64
+2025-03-17 18:33:37,770 - INFO - GPU memory cleared
+2025-03-17 18:33:37,820 - INFO - GPU memory cleared
+2025-03-17 18:36:00,602 - INFO - Installing PyTorch...
+2025-03-17 18:36:01,410 - INFO - Installing other dependencies...
+2025-03-17 18:36:04,485 - INFO - All dependencies installed successfully
+2025-03-17 18:36:04,485 - INFO - Setting up pipeline...
+2025-03-17 18:36:04,536 - INFO - GPU memory cleared
+2025-03-17 18:36:04,536 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:36:04,536 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:36:06,320 - INFO - Pipeline setup completed successfully
+2025-03-17 18:36:06,320 - INFO - Starting image generation...
+2025-03-17 18:36:06,320 - INFO - Prompt: As you delve deeper into the heart of the forest, the trees grow taller and closer together, casting long shadows across the forest floor. The air is thick with magic, and you can feel it humming through every inch of your being. You've been tasked with finding a lost treasure, rumored to be hidden somewhere within these woods.
+
+As you continue on your quest, you come across a small clearing surrounded by ancient trees. In the center of the clearing stands an enormous stone statue of a long-forgotten king, his eyes glinting with a strange, otherworldly light. The statue seems to be pulsing with magic, and you can feel its power radiating outward in waves.
+
+Suddenly, a small, furry creature darts out from under the statue's base. It's a mouse, but not just any ordinary mouse - this one is made entirely of gold. Its eyes gleam brightly in the sunlight, and it chitters excitedly as it scurries around your feet.
+
+The mouse seems to be trying to communicate with you, but you can't quite make out what it's saying. You decide to follow it, hoping that it will lead you to the lost treasure. The mouse darts off into the underbrush, and you quicken your pace to keep up with it.
+
+As you venture deeper into the forest, the trees grow taller and closer together, their trunks thickening until they're almost impenetrable. The air grows colder, and you can feel the magic in the air growing stronger by the minute. You know that you're getting close to the treasure, but you also sense that something else is lurking just out of sight - something powerful, and not necessarily friendly.
+
+Do you:
+A) Follow the golden mouse deeper into the forest
+B) Try to find another route to the lost treasure
+C) Wait and observe from a safe distance, hoping to gather more information before deciding what to do next
+2025-03-17 18:36:06,320 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:36:06,320 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183557.png
+2025-03-17 18:36:09,439 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183557.png
+2025-03-17 18:36:09,503 - INFO - Image converted to base64
+2025-03-17 18:36:09,567 - INFO - GPU memory cleared
+2025-03-17 18:36:09,619 - INFO - GPU memory cleared
+2025-03-17 18:37:40,392 - INFO - Installing PyTorch...
+2025-03-17 18:37:41,252 - INFO - Installing other dependencies...
+2025-03-17 18:37:44,432 - INFO - All dependencies installed successfully
+2025-03-17 18:37:44,432 - INFO - Setting up pipeline...
+2025-03-17 18:37:44,488 - INFO - GPU memory cleared
+2025-03-17 18:37:44,488 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:37:44,488 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:37:46,452 - INFO - Pipeline setup completed successfully
+2025-03-17 18:37:46,453 - INFO - Starting image generation...
+2025-03-17 18:37:46,453 - INFO - Prompt: You find yourself standing in a dense forest, the trees towering above you like giants. The air is thick with the scent of damp earth and decaying leaves, and you can hear the distant call of a bird echoing through the trees. As you explore deeper into the forest, you notice that the trees become twisted and gnarled, their branches reaching out like grasping fingers.
+
+Suddenly, you hear a rustling in the underbrush nearby. You turn to see a small, furtive creature darting away from you, its tail fluffed up as it scurries through the undergrowth. It's hard to make out what kind of creature it is, but it seems to be trying to hide something.
+
+Do you:
+A) Follow the creature and try to find out what it's hiding.
+B) Ignore the creature and continue exploring the forest on your own.
+C) Call out to the creature in a friendly manner, hoping to catch its attention.
+D) Stay where you are and wait for further developments.
+2025-03-17 18:37:46,453 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:37:46,453 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183737.png
+2025-03-17 18:37:49,463 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183737.png
+2025-03-17 18:37:49,497 - INFO - Image converted to base64
+2025-03-17 18:37:49,556 - INFO - GPU memory cleared
+2025-03-17 18:37:49,606 - INFO - GPU memory cleared
+2025-03-17 18:38:47,610 - INFO - Installing PyTorch...
+2025-03-17 18:38:48,423 - INFO - Installing other dependencies...
+2025-03-17 18:38:51,487 - INFO - All dependencies installed successfully
+2025-03-17 18:38:51,487 - INFO - Setting up pipeline...
+2025-03-17 18:38:51,539 - INFO - GPU memory cleared
+2025-03-17 18:38:51,539 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:38:51,539 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:38:53,317 - INFO - Pipeline setup completed successfully
+2025-03-17 18:38:53,317 - INFO - Starting image generation...
+2025-03-17 18:38:53,317 - INFO - Prompt: You find yourself in the dark, murky waters of the swamp. The air is thick with humidity and the smell of decay. You can hear strange noises all around you, the snapping of twigs, the chirping of insects, and the distant howling of something unseen.
+
+As you make your way deeper into the swamp, you come across a small clearing surrounded by tall, gnarled trees. In the center of the clearing stands a lone figure, hooded and cloaked in shadows. The figure is Boris, an infamous NPC known for his cunning and ruthlessness.
+
+Boris fixes you with a cold, dead stare as you approach. His voice is low and menacing when he speaks. "Well, well, well. What brings you to my neck of the woods? Don't tell me you're just here to get lost in the swamp like all the other fools before you?"
+
+He eyes your dagger hungrily. "I might be willing to make a deal with you... but it won't come cheap. What do you have to offer?"
+
+How do you respond?
+2025-03-17 18:38:53,317 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:38:53,317 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183844.png
+2025-03-17 18:38:56,389 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183844.png
+2025-03-17 18:38:56,429 - INFO - Image converted to base64
+2025-03-17 18:38:56,484 - INFO - GPU memory cleared
+2025-03-17 18:38:56,532 - INFO - GPU memory cleared
+2025-03-17 18:39:41,450 - INFO - Installing PyTorch...
+2025-03-17 18:39:42,204 - INFO - Installing other dependencies...
+2025-03-17 18:39:45,498 - INFO - All dependencies installed successfully
+2025-03-17 18:39:45,498 - INFO - Setting up pipeline...
+2025-03-17 18:39:45,552 - INFO - GPU memory cleared
+2025-03-17 18:39:45,552 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:39:45,552 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:39:49,128 - INFO - Pipeline setup completed successfully
+2025-03-17 18:39:49,128 - INFO - Starting image generation...
+2025-03-17 18:39:49,128 - INFO - Prompt: As you enter the swampy biome, the air is thick with mist and the smell of decay. The ground beneath your feet is spongy and unstable, making every step feel like a gamble. The trees tower above, their gnarled branches reaching out like grasping fingers.
+
+Suddenly, you hear the distant sound of snapping twigs and chirping creatures. It's hard to pinpoint the source of the noise, but it's clear that something is moving in the shadows. You can feel the tension building as you venture deeper into the swamp.
+
+You come across a small clearing, where a group of goblins are gathered around a makeshift campfire. They're huddled together, their eyes gleaming with a malevolent light in the flickering firelight. One of them catches sight of you and lets out a shrill bellow, alerting the others to your presence.
+
+The goblins quickly scramble to their feet, brandishing crude weapons and snarling at you like wolves preparing to attack. The apparent leader of the group, a particularly foul-looking creature with a twisted horn on its forehead, steps forward and sneers at you through yellowed teeth.
+
+"Well, well, well," it cackles. "What do we have here? A foolish adventurer who thinks they can traverse our swamp unscathed! You'll be dinner for the boggarts tonight, mark my words!"
+
+The goblins begin to circle around you, their eyes gleaming with a hungry intensity. It's clear that they won't stop until they've fed on your flesh and added it to their gruesome feast. What do you do?
+2025-03-17 18:39:49,129 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:39:49,129 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183939.png
+2025-03-17 18:39:52,124 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_183939.png
+2025-03-17 18:39:52,192 - INFO - Image converted to base64
+2025-03-17 18:39:52,252 - INFO - GPU memory cleared
+2025-03-17 18:39:52,304 - INFO - GPU memory cleared
+2025-03-17 18:40:24,777 - INFO - Installing PyTorch...
+2025-03-17 18:40:25,542 - INFO - Installing other dependencies...
+2025-03-17 18:40:28,765 - INFO - All dependencies installed successfully
+2025-03-17 18:40:28,765 - INFO - Setting up pipeline...
+2025-03-17 18:40:28,822 - INFO - GPU memory cleared
+2025-03-17 18:40:28,822 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:40:28,822 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:40:30,398 - INFO - Pipeline setup completed successfully
+2025-03-17 18:40:30,398 - INFO - Starting image generation...
+2025-03-17 18:40:30,398 - INFO - Prompt: As you step into the forest, the trees tower above you like sentinels, their trunks thick and gnarled. The air is alive with the chirping of birds and the rustling of leaves as small creatures scurry through the underbrush. You can feel a faint hum of magic in the air, as if the forest itself is alive and pulsing with magical energy.
+
+As you make your way deeper into the woods, you notice a figure standing at the edge of a clearing. The NPC, a tall and imposing figure with piercing eyes and a stern expression, stands watchfully at the entrance to the glade. They are dressed in practical clothing, such as leather armor and a cloak, and carry a longbow slung over their shoulder.
+
+"Who dares enter my forest uninvited?" the NPC growls menacingly, eyes fixed intently on you. "State your business or face the consequences."
+
+You can:
+A) Introduce yourself and explain your reason for entering the forest. (Roll a Charisma check to persuade the NPC.)
+B) Attack the NPC with your weapon. (Roll an attack roll against the NPC's AC.)
+C) Use magic to neutralize the situation. (Roll a spellcasting check to cast a spell of your choice.)
+D) Turn around and leave the forest immediately. (No action required, simply exit the forest.)
+2025-03-17 18:40:30,398 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:40:30,398 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_184023.png
+2025-03-17 18:40:33,289 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_184023.png
+2025-03-17 18:40:33,327 - INFO - Image converted to base64
+2025-03-17 18:40:33,385 - INFO - GPU memory cleared
+2025-03-17 18:40:33,433 - INFO - GPU memory cleared
+2025-03-17 18:46:18,641 - INFO - Installing PyTorch...
+2025-03-17 18:46:19,465 - INFO - Installing other dependencies...
+2025-03-17 18:46:22,625 - INFO - All dependencies installed successfully
+2025-03-17 18:46:22,625 - INFO - Setting up pipeline...
+2025-03-17 18:46:22,677 - INFO - GPU memory cleared
+2025-03-17 18:46:22,677 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:46:22,677 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:46:24,952 - INFO - Pipeline setup completed successfully
+2025-03-17 18:46:24,952 - INFO - Starting image generation...
+2025-03-17 18:46:24,952 - INFO - Prompt: You find yourself in a dense forest, the trees towering above you like sentinels. The air is filled with the sweet scent of blooming wildflowers and the soft chirping of birds. A gentle breeze rustles through the leaves, causing the branches to creak and sway in rhythm.
+
+As you venture deeper into the forest, you notice a small clearing ahead. In the center of the clearing stands an ancient tree, its trunk twisted and gnarled with age. The tree seems to be pulsing with a strange energy, as if it holds secrets and magic within its bark.
+
+Suddenly, a figure emerges from the shadows. It is an old man, dressed in a long, flowing robe that appears to be made of leaves and vines. He has a wild look in his eye, as if he has been living in the forest for centuries.
+
+"Ah, a brave adventurer!" the old man exclaims, his voice like the rustling of autumn leaves. "I have been waiting for you. My name is Druidus, and I am here to guide you on your journey."
+
+Druidus gestures towards the ancient tree. "That is the Heartwood Tree, a place of great power and magic. But beware, young adventurer, for the forest is full of dangers, and not all creatures are as they seem."
+
+With that, Druidus disappears back into the shadows, leaving you to ponder his words and the secrets of the Heartwood Tree. What will you do next?
+
+1. Approach the Heartwood Tree and investigate its powers.
+2. Search the forest for signs of danger or mystery.
+3. Follow Druidus's path and see where it leads.
+2025-03-17 18:46:24,952 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:46:24,952 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_184615.png
+2025-03-17 18:46:28,227 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_184615.png
+2025-03-17 18:46:28,261 - INFO - Image converted to base64
+2025-03-17 18:46:28,317 - INFO - GPU memory cleared
+2025-03-17 18:46:28,367 - INFO - GPU memory cleared
+2025-03-17 18:48:32,996 - INFO - Installing PyTorch...
+2025-03-17 18:48:33,814 - INFO - Installing other dependencies...
+2025-03-17 18:48:36,882 - INFO - All dependencies installed successfully
+2025-03-17 18:48:36,882 - INFO - Setting up pipeline...
+2025-03-17 18:48:36,931 - INFO - GPU memory cleared
+2025-03-17 18:48:36,931 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:48:36,931 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:48:38,782 - INFO - Pipeline setup completed successfully
+2025-03-17 18:48:38,782 - INFO - Starting image generation...
+2025-03-17 18:48:38,782 - INFO - Prompt: As you walk through the desert, the sand shifting beneath your feet, you come across a small oasis. In the center of the oasis stands a lone figure, shrouded in mystery. The stranger looks up as you approach, their eyes gleaming with an otherworldly light. You can't quite make out their features in the fading light of day.
+
+"Greetings, traveler," the stranger says in a low, husky voice. "I've been waiting for you."
+
+You feel a shiver run down your spine as the stranger steps closer to you. They are tall and imposing, their presence commanding attention. You can't help but feel drawn to them, despite the unease that settles in your stomach.
+
+"Who are you?" you ask, trying to keep your voice steady.
+
+The stranger smiles, revealing a mouth full of sharp teeth. "I am one who knows secrets," they say. "Secrets that could change the course of your journey."
+
+Do you:
+A) Ask the stranger for more information about their secrets
+B) Ignore the stranger and continue on your way
+C) Challenge the stranger to a game or contest to prove your worth
+D) Try to sneak past the stranger without drawing attention to yourself
+2025-03-17 18:48:38,782 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:48:38,782 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_184830.png
+2025-03-17 18:48:41,762 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_184830.png
+2025-03-17 18:48:41,821 - INFO - Image converted to base64
+2025-03-17 18:48:41,883 - INFO - GPU memory cleared
+2025-03-17 18:48:41,937 - INFO - GPU memory cleared
+2025-03-17 18:50:24,742 - INFO - Installing PyTorch...
+2025-03-17 18:50:25,589 - INFO - Installing other dependencies...
+2025-03-17 18:50:28,781 - INFO - All dependencies installed successfully
+2025-03-17 18:50:28,781 - INFO - Setting up pipeline...
+2025-03-17 18:50:28,832 - INFO - GPU memory cleared
+2025-03-17 18:50:28,832 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 18:50:28,832 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 18:50:30,656 - INFO - Pipeline setup completed successfully
+2025-03-17 18:50:30,656 - INFO - Starting image generation...
+2025-03-17 18:50:30,656 - INFO - Prompt: As you delve deeper into the heart of the jungle, the air grows thick with humidity and the sounds of exotic creatures echo through the dense foliage. The sun beats down from above, casting dappled patterns of light and shadow on the forest floor. You can almost feel the life force of the jungle pulsing around you, a vibrant tapestry of colors and textures that seems to come alive in your hands.
+
+As you continue on your journey, you stumble upon a clearing surrounded by towering trees, their trunks twisted and gnarled with age. In the center of the clearing stands an ancient tree, its bark covered in moss and lichen, its branches reaching towards the sky like skeletal fingers. The air is heavy with the scent of blooming flowers and the distant call of birds can be heard in the distance.
+
+Suddenly, you hear a low rumbling noise, like thunder in the distance. You look up to see a massive storm cloud brewing on the horizon, threatening to unleash its fury upon the jungle at any moment. The wind picks up, causing the trees to creak and sway ominously, as if warning you of the impending tempest.
+
+As you ponder your next move, a figure emerges from the shadows of the ancient tree. It is an old wise man, dressed in simple raiment, his face lined with age and wisdom. He regards you with piercing eyes, as if sizing you up before speaking in a low, rumbling voice.
+
+"Ah, traveler," he begins, "you have come to this place seeking answers to the mysteries of life. Very well, I will grant you your wish, but be warned: the truths I speak may not be what you expect."
+
+What do you ask him?
+2025-03-17 18:50:30,656 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 18:50:30,656 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_185021.png
+2025-03-17 18:50:33,796 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_185021.png
+2025-03-17 18:50:33,829 - INFO - Image converted to base64
+2025-03-17 18:50:33,886 - INFO - GPU memory cleared
+2025-03-17 18:50:33,939 - INFO - GPU memory cleared
+2025-03-17 19:08:09,231 - INFO - Installing PyTorch...
+2025-03-17 19:08:10,106 - INFO - Installing other dependencies...
+2025-03-17 19:08:13,358 - INFO - All dependencies installed successfully
+2025-03-17 19:08:13,358 - INFO - Setting up pipeline...
+2025-03-17 19:08:13,412 - INFO - GPU memory cleared
+2025-03-17 19:08:13,412 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 19:08:13,412 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 19:08:15,312 - INFO - Pipeline setup completed successfully
+2025-03-17 19:08:15,313 - INFO - Starting image generation...
+2025-03-17 19:08:15,313 - INFO - Prompt: As you find yourself standing at the edge of a vast and rugged mountain range, the wind howls and bites at your exposed skin. The sun beats down upon you, casting long shadows across the landscape. You can feel the weight of the world on your shoulders, as if the very fabric of reality is straining beneath the sheer force of your own existence.
+
+And yet, despite the oppressive heaviness of the air, you cannot help but feel a glimmer of hope. For deep within this foreboding landscape, there exists a chance for adventure, for fortune, and for transcendence. The call of the unknown is strong here, beckoning you to leave behind the mundane and embrace the extraordinary.
+
+You notice a figure in the distance, cloaked in shadow and indistinct from the darkness of the mountain. As they draw nearer, their form begins to take shape: a tall, imposing man with piercing eyes that seem to bore into your very soul. He is Arthur, a wanderer and seeker of magic, who has heard rumors of a long-lost spell hidden deep within these mountains.
+
+Arthur's face is stern and unyielding, his voice low and gravelly as he approaches you. "Greetings, adventurer," he growls. "I have been searching for this mountain range for years, ever since I heard whispers of a spell hidden within its peaks. But the journey has been long and treacherous, and many have attempted to find it before me...and failed."
+
+He pauses, gazing into the distance as if lost in thought. "But you," he says, turning his piercing eyes upon you once more. "You seem different. You have a spark within you that I have not seen in any other seeker of magic. Are you brave enough to face the challenges ahead?"
+
+Do you:
+A) Accept the challenge and follow Arthur into the mountains
+B) Decline the challenge and continue on your own path
+C) Ask Arthur for more information about the spell and the challenges that lie within
+2025-03-17 19:08:15,313 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 19:08:15,313 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_190806.png
+2025-03-17 19:08:18,713 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_190806.png
+2025-03-17 19:08:18,760 - INFO - Image converted to base64
+2025-03-17 19:08:18,824 - INFO - GPU memory cleared
+2025-03-17 19:08:18,879 - INFO - GPU memory cleared
+2025-03-17 19:10:00,817 - INFO - Installing PyTorch...
+2025-03-17 19:10:01,685 - INFO - Installing other dependencies...
+2025-03-17 19:10:06,929 - INFO - All dependencies installed successfully
+2025-03-17 19:10:06,929 - INFO - Setting up pipeline...
+2025-03-17 19:10:06,984 - INFO - GPU memory cleared
+2025-03-17 19:10:06,984 - INFO - Available GPU memory: 15.99 GB
+2025-03-17 19:10:06,984 - INFO - Using WSL2 environment - optimizing for GPU-only processing
+2025-03-17 19:10:08,857 - INFO - Pipeline setup completed successfully
+2025-03-17 19:10:08,857 - INFO - Starting image generation...
+2025-03-17 19:10:08,857 - INFO - Prompt: Arriving at the coast, you see Arthur standing on a rocky outcropping, staring intently into the distance. He's dressed in a tattered cloak and carrying a staff adorned with shells and pebbles. As you approach, he turns to face you, his eyes gleaming with determination.
+
+"Ah, adventurer! I see you've come to help me defeat Jizzar the Lizard," Arthur says, his voice filled with excitement. "He's been causing chaos in these waters for far too long, and it's time someone put a stop to it."
+
+Arthur hands you his staff, which he claims contains powerful magic that will aid you in your battle against Jizzar. However, as you examine the staff, you realize there is no magic present. Arthur has been relying on his own strength and cunning to protect the coast from Jizzar's attacks.
+
+"I see," you say, disappointed by the lack of magical assistance. "Well, we can still give it a try. What do you know about Jizzar's abilities?"
+
+Arthur nods eagerly. "Ah, yes! Jizzar is quite powerful, I must admit. He has the ability to control and manipulate water, which makes him a formidable foe in close combat. But don't worry, I have a few tricks up my sleeve to give us an edge."
+
+With that, Arthur leads you deeper into the coastal area, where Jizzar is rumored to be hiding. As you walk, he tells you about his past battles against the lizard and how he's managed to hold off Jizzar's attacks so far. Despite the lack of magic, Arthur seems confident in his abilities, and you begin to share his determination.
+
+Suddenly, Arthur stops and listens intently. "Do you hear that?" he whispers. "Jizzar must be nearby."
+
+You strain your ears, but all you can hear is the sound of waves crashing against the shore. Arthur nods knowingly and leads you deeper into the coastal vegetation. As you move forward, Jizzar suddenly leaps out from behind a bush, his eyes gleaming with malevolence.
+
+"Ah, adventurer! I've been waiting for you,"
+2025-03-17 19:10:08,857 - INFO - Settings: 30 steps, 7.5 guidance scale, (768, 512) resolution
+2025-03-17 19:10:08,857 - INFO - Output file: /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_190957.png
+2025-03-17 19:10:12,215 - INFO - Image saved successfully to /home/mrdjan/standard-llama-7b-general/python/image-generation/outputs/generated_images/generated_20250317_190957.png
+2025-03-17 19:10:12,276 - INFO - Image converted to base64
+2025-03-17 19:10:12,341 - INFO - GPU memory cleared
+2025-03-17 19:10:12,401 - INFO - GPU memory cleared

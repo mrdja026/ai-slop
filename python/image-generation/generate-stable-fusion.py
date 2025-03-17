@@ -6,6 +6,9 @@ import torch
 import subprocess
 import gc
 import json
+import argparse
+import base64
+from io import BytesIO
 from pathlib import Path
 from diffusers import StableDiffusionPipeline
 
@@ -115,13 +118,15 @@ def generate_image(
     output_file: str,
     num_steps: int = 30,
     guidance_scale: float = 7.5,
-    size: tuple = (768, 512)
+    size: tuple = (768, 512),
+    return_base64: bool = False
 ):
     """Generate image with error handling and progress logging."""
     try:
         logger.info("Starting image generation...")
         logger.info(f"Prompt: {prompt}")
         logger.info(f"Settings: {num_steps} steps, {guidance_scale} guidance scale, {size} resolution")
+        logger.info(f"Output file: {output_file}")
 
         # Generate image with optimized settings
         with torch.inference_mode():
@@ -144,15 +149,19 @@ def generate_image(
         if output_dir:
             os.makedirs(output_dir, exist_ok=True)
 
-        # Save with timestamp
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename, ext = os.path.splitext(output_file)
-        output_path = f"{filename}_{timestamp}{ext}"
+        # Save the image to file
+        image.save(output_file)
+        logger.info(f"Image saved successfully to {output_file}")
 
-        image.save(output_path)
-        logger.info(f"Image saved successfully to {output_path}")
+        # If base64 is requested, convert the image to base64
+        if return_base64:
+            buffered = BytesIO()
+            image.save(buffered, format="PNG")
+            img_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')
+            logger.info("Image converted to base64")
+            return output_file, img_base64
 
-        return output_path
+        return output_file, None
 
     except Exception as e:
         logger.error(f"Error generating image: {str(e)}")
@@ -283,7 +292,8 @@ def batch_generate_images(response_dir: str, output_dir: str = "outputs/generate
                         output_file=output_file,
                         num_steps=30,  # Reduced steps
                         guidance_scale=7.5,  # Standard guidance
-                        size=(768, 512)  # Smaller size
+                        size=(768, 512),  # Smaller size
+                        return_base64=False
                     )
 
                     logger.info(f"Completed response {idx}/{total_responses} from {json_file}")
@@ -304,20 +314,60 @@ def batch_generate_images(response_dir: str, output_dir: str = "outputs/generate
     finally:
         clear_gpu_memory()
 
+def parse_args():
+    """Parse command line arguments"""
+    parser = argparse.ArgumentParser(description="Generate images using Stable Diffusion")
+    parser.add_argument("--single_image", action="store_true", help="Generate a single image")
+    parser.add_argument("--prompt", type=str, help="Text prompt for image generation")
+    parser.add_argument("--negative_prompt", type=str, default="blurry, low quality, distorted, deformed, disfigured, bad anatomy, ugly, duplicate, error",
+                      help="Negative prompt for image generation")
+    parser.add_argument("--num_steps", type=int, default=30, help="Number of inference steps")
+    parser.add_argument("--guidance_scale", type=float, default=7.5, help="Guidance scale")
+    parser.add_argument("--height", type=int, default=768, help="Image height")
+    parser.add_argument("--width", type=int, default=512, help="Image width")
+    parser.add_argument("--output_file", type=str, help="Output file path")
+    parser.add_argument("--return_base64", action="store_true", help="Return base64 encoded image")
+    return parser.parse_args()
+
 if __name__ == "__main__":
     try:
+        args = parse_args()
+
         # Check dependencies
         check_dependencies()
 
-        # Configuration
-        response_dir = "../llama7b-chat/actor-method/response_data"
-        output_dir = "outputs/generated_images"
+        if args.single_image:
+            if not args.prompt:
+                logger.error("Prompt is required for single image generation")
+                sys.exit(1)
 
-        # Generate images from all JSON files
-        batch_generate_images(response_dir, output_dir)
+            # Setup pipeline
+            pipe = setup_pipeline("CompVis/stable-diffusion-v1-4")
 
-        print(f"\nImage generation completed successfully!")
-        print(f"Output directory: {output_dir}")
+            try:
+                # Generate the image
+                output_path, base64_image = generate_image(
+                    pipe=pipe,
+                    prompt=args.prompt,
+                    negative_prompt=args.negative_prompt,
+                    output_file=args.output_file,
+                    num_steps=args.num_steps,
+                    guidance_scale=args.guidance_scale,
+                    size=(args.height, args.width),
+                    return_base64=args.return_base64
+                )
+                print(f"Image generated successfully: {output_path}")
+                if base64_image:
+                    print(f"BASE64:{base64_image}")
+            finally:
+                clear_gpu_memory()
+        else:
+            # Original batch generation code
+            response_dir = "../llama7b-chat/actor-method/response_data"
+            output_dir = "outputs/generated_images"
+            batch_generate_images(response_dir, output_dir)
+            print(f"\nImage generation completed successfully!")
+            print(f"Output directory: {output_dir}")
 
     except Exception as e:
         logger.error(f"Fatal error: {str(e)}")

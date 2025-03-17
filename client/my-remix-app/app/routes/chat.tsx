@@ -9,6 +9,7 @@ interface Message {
     text: string;
     sender: "user" | "assistant";
     timestamp: Date;
+    image_base64?: string;
 }
 
 interface DropdownOption {
@@ -102,14 +103,13 @@ export async function action({ request }: ActionFunctionArgs) {
 
 export default function ChatRoute() {
     const [messages, setMessages] = useState<Message[]>([]);
-    const [choice, setChoice] = useState("NPC");
-    const [biome, setBiome] = useState("Forest");
-    const [features, setFeatures] = useState("Magic");
-    const [constriction, setConstriction] = useState("None");
-    const [textStyle, setTextStyle] = useState("Descriptive");
+    const [choice, setChoice] = useState("encounter");
+    const [biome, setBiome] = useState("forest");
+    const [features, setFeatures] = useState("with combat");
+    const [constriction, setConstriction] = useState("with no magic");
+    const [textStyle, setTextStyle] = useState("in a descriptive style");
     const [isLoading, setIsLoading] = useState(false);
     const navigation = useNavigation();
-    const isSubmitting = navigation.state === "submitting";
 
     const DropdownSelect = ({
         options,
@@ -122,9 +122,9 @@ export default function ChatRoute() {
         onChange: (value: string) => void,
         label: string
     }) => (
-        <div className="relative group w-full sm:w-auto">
+        <div className="relative group w-full">
             <select
-                className="w-full sm:w-auto bg-gray-800 text-white border border-red-500 rounded px-2 sm:px-3 2xl:px-4 py-1 2xl:py-2 text-xs sm:text-sm 2xl:text-base focus:outline-none focus:ring-2 focus:ring-red-500 min-w-[120px] 2xl:min-w-[180px]"
+                className="w-full bg-gray-800 text-white border border-red-500 rounded px-2 sm:px-3 md:px-4 lg:px-5 2xl:px-6 py-1 sm:py-2 md:py-3 lg:py-4 2xl:py-5 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl focus:outline-none focus:ring-2 focus:ring-red-500"
                 onChange={(e) => onChange(e.target.value)}
                 value={value}
             >
@@ -135,15 +135,70 @@ export default function ChatRoute() {
                     </option>
                 ))}
             </select>
-            <div className="absolute z-10 invisible group-hover:visible bg-gray-900 text-white text-xs 2xl:text-sm rounded p-2 2xl:p-3 shadow-lg border border-red-500 w-48 2xl:w-64 mt-1">
+            <div className="absolute z-50 invisible group-hover:visible bg-gray-900 text-white text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl rounded p-2 sm:p-3 md:p-4 lg:p-5 2xl:p-6 shadow-lg border border-red-500 w-full mt-1">
                 {options.find(opt => opt.value === value)?.description || `Select a ${label.toLowerCase()}`}
             </div>
         </div>
     );
 
+    const handleImageGeneration = async (text: string) => {
+        try {
+            setIsLoading(true);
+            const response = await fetch("http://localhost:1025/generate-image", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    prompt: text,
+                    negative_prompt: "blurry, low quality, distorted, deformed, disfigured, bad anatomy, ugly, duplicate, error",
+                    num_steps: 30,
+                    guidance_scale: 7.5,
+                    height: 768,
+                    width: 512
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error("Failed to generate image");
+            }
+
+            const data = await response.json();
+
+            if (data.success && data.image_base64) {
+                // Add the generated image as a new message
+                const imageMessage: Message = {
+                    id: (Date.now() + 2).toString(),
+                    text: "Generated image based on: " + text,
+                    sender: "assistant",
+                    timestamp: new Date(),
+                    image_base64: data.image_base64
+                };
+
+                setMessages(prev => [...prev, imageMessage]);
+            }
+        } catch (error) {
+            console.error("Error generating image:", error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
+
+        // Validate dropdown values
+        const missingFields = [];
+        if (!choice || choice === "") missingFields.push("Choice");
+        if (!biome || biome === "") missingFields.push("Biome");
+        if (!features || features === "") missingFields.push("Features");
+        if (!textStyle || textStyle === "") missingFields.push("Text Style");
+
+        if (missingFields.length > 0) {
+            alert(`Please select values for: ${missingFields.join(", ")}`);
+            return;
+        }
 
         try {
             setIsLoading(true);
@@ -154,7 +209,7 @@ export default function ChatRoute() {
                 },
                 body: JSON.stringify({
                     prompt: formData.get("message") as string,
-                    system_message: `<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- ${formData.get("choice")}\n\nBiome:\n- ${formData.get("biome")}\n\nFeatures:\n- ${formData.get("features")}\n\nConstriction:\n- ${formData.get("constriction")}\n\nText Style:\n- ${formData.get("textStyle")}\n<</SYS>>\n\n${formData.get("message")}\n\nStyle: ${formData.get("textStyle")} [/INST]`
+                    system_message: `<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- ${choice}\n\nBiome:\n- ${biome}\n\nFeatures:\n- ${features}\n\nConstriction:\n- ${constriction}\n\nText Style:\n- ${textStyle}\n<</SYS>>\n\n${formData.get("message")}\n\nStyle: ${textStyle} [/INST]`
                 }),
             });
 
@@ -183,91 +238,128 @@ export default function ChatRoute() {
             setMessages(prev => [...prev, userMessage, aiMessage]);
         } catch (error) {
             console.error("Error sending message:", error);
+            alert("Failed to generate response. Please try again.");
         } finally {
             setIsLoading(false);
         }
     };
 
     return (
-        <div className="min-h-screen bg-black py-4 sm:py-8 md:py-12 2xl:py-16">
-            <div className="max-w-4xl 2xl:max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 2xl:px-12">
-                <div className="text-center mb-4 sm:mb-6 md:mb-8 2xl:mb-12">
-                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2xl:text-7xl font-extrabold text-white">
-                        <span className="block">D&D AI Dungeon Master</span>
-                        <span className="block text-red-500">Craft Your Fantasy World</span>
-                    </h1>
-                    <p className="mt-2 sm:mt-3 2xl:mt-6 max-w-md 2xl:max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-300">
-                        Embark on a journey of world-building and storytelling. Create NPCs, design locations, craft quests, and weave tales of adventure in your fantasy realm.
-                    </p>
-                </div>
+        <div className="min-h-screen bg-gray-900 flex flex-col">
+            <div className="flex-1 container mx-auto px-4 sm:px-6 md:px-8 lg:px-10 2xl:px-12 py-4 sm:py-6 md:py-8 lg:py-10 2xl:py-12">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 md:gap-8 lg:gap-10 2xl:gap-12 h-full">
+                    {/* Settings Column */}
+                    <div className="lg:col-span-3 2xl:col-span-2 bg-gray-800 rounded-lg border border-red-500 p-4 sm:p-6 md:p-8 lg:p-10 2xl:p-12 overflow-y-auto">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-red-500 mb-4 sm:mb-6 md:mb-8 lg:mb-10 2xl:mb-12">Settings</h2>
+                        <div className="space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 2xl:space-y-12">
+                            {/* Choice */}
+                            <div>
+                                <label className="block text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-300 mb-2 sm:mb-3 md:mb-4 lg:mb-5 2xl:mb-6">
+                                    Choice
+                                </label>
+                                <select
+                                    value={choice}
+                                    onChange={(e) => setChoice(e.target.value)}
+                                    className="w-full bg-gray-700 text-white rounded-lg px-3 sm:px-4 md:px-5 lg:px-6 2xl:px-8 py-2 sm:py-3 md:py-4 lg:py-5 2xl:py-6 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl focus:outline-none focus:ring-2 focus:ring-red-500"
+                                >
+                                    <option value="encounter">Encounter</option>
+                                    <option value="location">Location</option>
+                                    <option value="npc">NPC</option>
+                                    <option value="quest">Quest</option>
+                                </select>
+                            </div>
 
-                {/* Settings Dropdowns */}
-                <div className="bg-gray-900 shadow-xl rounded-xl sm:rounded-2xl overflow-hidden border border-red-500 p-2 sm:p-4 md:p-6 2xl:p-8 mb-4 sm:mb-6 2xl:mb-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3 md:gap-4 2xl:gap-6">
-                        <div className="flex flex-col items-center space-y-1 2xl:space-y-2">
-                            <label className="text-xs 2xl:text-base text-gray-400">Choice</label>
-                            <DropdownSelect
-                                options={CHOICE_OPTIONS}
-                                value={choice}
-                                onChange={setChoice}
-                                label="Select Choice"
-                            />
-                        </div>
-                        <div className="flex flex-col items-center space-y-1 2xl:space-y-2">
-                            <label className="text-xs 2xl:text-base text-gray-400">Biome</label>
-                            <DropdownSelect
-                                options={BIOME_OPTIONS}
-                                value={biome}
-                                onChange={setBiome}
-                                label="Select Biome"
-                            />
-                        </div>
-                        <div className="flex flex-col items-center space-y-1 2xl:space-y-2">
-                            <label className="text-xs 2xl:text-base text-gray-400">Features</label>
-                            <DropdownSelect
-                                options={FEATURES_OPTIONS}
-                                value={features}
-                                onChange={setFeatures}
-                                label="Select Features"
-                            />
-                        </div>
-                        <div className="flex flex-col items-center space-y-1 2xl:space-y-2">
-                            <label className="text-xs 2xl:text-base text-gray-400">Constriction</label>
-                            <DropdownSelect
-                                options={CONSTRICTION_OPTIONS}
-                                value={constriction}
-                                onChange={setConstriction}
-                                label="Select Constriction"
-                            />
-                        </div>
-                        <div className="flex flex-col items-center space-y-1 2xl:space-y-2">
-                            <label className="text-xs 2xl:text-base text-gray-400">Text Style</label>
-                            <DropdownSelect
-                                options={TEXT_STYLE_OPTIONS}
-                                value={textStyle}
-                                onChange={setTextStyle}
-                                label="Select Style"
-                            />
+                            {/* Biome */}
+                            <div>
+                                <label className="block text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-300 mb-2 sm:mb-3 md:mb-4 lg:mb-5 2xl:mb-6">
+                                    Biome
+                                </label>
+                                <select
+                                    value={biome}
+                                    onChange={(e) => setBiome(e.target.value)}
+                                    className="w-full bg-gray-700 text-white rounded-lg px-3 sm:px-4 md:px-5 lg:px-6 2xl:px-8 py-2 sm:py-3 md:py-4 lg:py-5 2xl:py-6 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl focus:outline-none focus:ring-2 focus:ring-red-500"
+                                >
+                                    <option value="forest">Forest</option>
+                                    <option value="mountain">Mountain</option>
+                                    <option value="desert">Desert</option>
+                                    <option value="swamp">Swamp</option>
+                                    <option value="coast">Coast</option>
+                                    <option value="city">City</option>
+                                </select>
+                            </div>
+
+                            {/* Features */}
+                            <div>
+                                <label className="block text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-300 mb-2 sm:mb-3 md:mb-4 lg:mb-5 2xl:mb-6">
+                                    Features
+                                </label>
+                                <select
+                                    value={features}
+                                    onChange={(e) => setFeatures(e.target.value)}
+                                    className="w-full bg-gray-700 text-white rounded-lg px-3 sm:px-4 md:px-5 lg:px-6 2xl:px-8 py-2 sm:py-3 md:py-4 lg:py-5 2xl:py-6 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl focus:outline-none focus:ring-2 focus:ring-red-500"
+                                >
+                                    <option value="with combat">With Combat</option>
+                                    <option value="with exploration">With Exploration</option>
+                                    <option value="with social interaction">With Social Interaction</option>
+                                    <option value="with puzzle">With Puzzle</option>
+                                </select>
+                            </div>
+
+                            {/* Constriction */}
+                            <div>
+                                <label className="block text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-300 mb-2 sm:mb-3 md:mb-4 lg:mb-5 2xl:mb-6">
+                                    Constriction
+                                </label>
+                                <select
+                                    value={constriction}
+                                    onChange={(e) => setConstriction(e.target.value)}
+                                    className="w-full bg-gray-700 text-white rounded-lg px-3 sm:px-4 md:px-5 lg:px-6 2xl:px-8 py-2 sm:py-3 md:py-4 lg:py-5 2xl:py-6 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl focus:outline-none focus:ring-2 focus:ring-red-500"
+                                >
+                                    <option value="with no magic">With No Magic</option>
+                                    <option value="with low magic">With Low Magic</option>
+                                    <option value="with high magic">With High Magic</option>
+                                </select>
+                            </div>
+
+                            {/* Text Style */}
+                            <div>
+                                <label className="block text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl text-gray-300 mb-2 sm:mb-3 md:mb-4 lg:mb-5 2xl:mb-6">
+                                    Text Style
+                                </label>
+                                <select
+                                    value={textStyle}
+                                    onChange={(e) => setTextStyle(e.target.value)}
+                                    className="w-full bg-gray-700 text-white rounded-lg px-3 sm:px-4 md:px-5 lg:px-6 2xl:px-8 py-2 sm:py-3 md:py-4 lg:py-5 2xl:py-6 text-sm sm:text-base md:text-lg lg:text-xl 2xl:text-2xl focus:outline-none focus:ring-2 focus:ring-red-500"
+                                >
+                                    <option value="in a descriptive style">Descriptive</option>
+                                    <option value="in a concise style">Concise</option>
+                                    <option value="in a dramatic style">Dramatic</option>
+                                    <option value="in a humorous style">Humorous</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div className="bg-gray-900 shadow-xl rounded-xl sm:rounded-2xl overflow-hidden border border-red-500">
-                    <Chat
-                        messages={messages}
-                        onSendMessage={handleSubmit}
-                        isSubmitting={isLoading}
-                        choice={choice}
-                        setChoice={setChoice}
-                        biome={biome}
-                        setBiome={setBiome}
-                        features={features}
-                        setFeatures={setFeatures}
-                        constriction={constriction}
-                        setConstriction={setConstriction}
-                        textStyle={textStyle}
-                        setTextStyle={setTextStyle}
-                    />
+                    {/* Chat Column */}
+                    <div className="lg:col-span-9 2xl:col-span-10 flex flex-col h-full">
+                        <Chat
+                            messages={messages}
+                            setMessages={setMessages}
+                            onSendMessage={handleSubmit}
+                            onGenerateImage={handleImageGeneration}
+                            isSubmitting={isLoading}
+                            choice={choice}
+                            setChoice={setChoice}
+                            biome={biome}
+                            setBiome={setBiome}
+                            features={features}
+                            setFeatures={setFeatures}
+                            constriction={constriction}
+                            setConstriction={setConstriction}
+                            textStyle={textStyle}
+                            setTextStyle={setTextStyle}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
