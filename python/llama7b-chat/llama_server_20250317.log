@@ -1,0 +1,754 @@
+2025-03-17 16:54:57,620 - INFO - [server.py:162] - <module> - Starting Llama server on port 8000
+2025-03-17 16:54:57,621 - DEBUG - [selector_events.py:64] - __init__ - Using selector: EpollSelector
+2025-03-17 16:54:57,627 - INFO - [server.py:108] - startup_event - Starting up Llama server
+2025-03-17 16:54:57,627 - INFO - [server.py:51] - setup_model - Setting up CUDA environment
+2025-03-17 16:54:57,664 - INFO - [server.py:58] - setup_model - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-17 16:54:57,664 - INFO - [server.py:61] - setup_model - Loading model and tokenizer
+2025-03-17 16:54:57,666 - DEBUG - [connectionpool.py:1049] - _new_conn - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-17 16:54:57,899 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-17 16:54:59,612 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-17 16:54:59,663 - DEBUG - [cextension.py:71] - get_native_library - Loading bitsandbytes native library from: /home/mrdjan/llm-env/lib/python3.12/site-packages/bitsandbytes/libbitsandbytes_cuda124.so
+2025-03-17 16:54:59,844 - INFO - [modeling.py:990] - get_balanced_memory - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-17 16:55:08,958 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-17 16:55:08,967 - INFO - [server.py:89] - setup_model - Model setup completed successfully
+2025-03-17 16:55:22,006 - INFO - [server.py:117] - generate_content - Received generation request with prompt: What is the capital of France?...
+2025-03-17 16:55:22,006 - DEBUG - [server.py:99] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+You are a helpful AI assistant.
+<</SYS>>
+
+What is the capital of France? [/INST]
+2025-03-17 16:55:23,368 - INFO - [server.py:143] - generate_content - Generation completed in 1.36 seconds
+2025-03-17 16:58:25,541 - INFO - [server.py:147] - <module> - Starting Llama server on port 8000
+2025-03-17 16:58:25,542 - DEBUG - [selector_events.py:64] - __init__ - Using selector: EpollSelector
+2025-03-17 16:58:25,550 - INFO - [server.py:49] - startup_event - Starting up Llama server
+2025-03-17 16:58:25,550 - INFO - [server.py:57] - setup_model - Setting up CUDA environment
+2025-03-17 16:58:25,563 - INFO - [server.py:64] - setup_model - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-17 16:58:25,564 - INFO - [server.py:67] - setup_model - Loading model and tokenizer
+2025-03-17 16:58:25,566 - DEBUG - [connectionpool.py:1049] - _new_conn - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-17 16:58:25,750 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-17 16:58:25,931 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-17 16:58:25,973 - DEBUG - [cextension.py:71] - get_native_library - Loading bitsandbytes native library from: /home/mrdjan/llm-env/lib/python3.12/site-packages/bitsandbytes/libbitsandbytes_cuda124.so
+2025-03-17 16:58:26,146 - INFO - [modeling.py:990] - get_balanced_memory - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-17 16:58:32,119 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-17 16:58:32,126 - INFO - [server.py:95] - setup_model - Model setup completed successfully
+2025-03-17 16:58:37,051 - INFO - [server.py:147] - <module> - Starting Llama server on port 8000
+2025-03-17 16:58:37,052 - DEBUG - [selector_events.py:64] - __init__ - Using selector: EpollSelector
+2025-03-17 16:58:37,059 - INFO - [server.py:49] - startup_event - Starting up Llama server
+2025-03-17 16:58:37,059 - INFO - [server.py:57] - setup_model - Setting up CUDA environment
+2025-03-17 16:58:37,073 - INFO - [server.py:64] - setup_model - Using GPU: NVIDIA GeForce RTX 4080 SUPER with 15.99 GB memory
+2025-03-17 16:58:37,073 - INFO - [server.py:67] - setup_model - Loading model and tokenizer
+2025-03-17 16:58:37,074 - DEBUG - [connectionpool.py:1049] - _new_conn - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-17 16:58:37,296 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-17 16:58:37,465 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-17 16:58:37,484 - DEBUG - [cextension.py:71] - get_native_library - Loading bitsandbytes native library from: /home/mrdjan/llm-env/lib/python3.12/site-packages/bitsandbytes/libbitsandbytes_cuda124.so
+2025-03-17 16:58:37,643 - INFO - [modeling.py:990] - get_balanced_memory - We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+2025-03-17 16:58:39,637 - DEBUG - [connectionpool.py:544] - _make_request - https://huggingface.co:443 "HEAD /NousResearch/Llama-2-7b-chat-hf/resolve/main/generation_config.json HTTP/1.1" 200 0
+2025-03-17 16:58:39,644 - INFO - [server.py:95] - setup_model - Model setup completed successfully
+2025-03-17 17:01:33,720 - INFO - [server.py:105] - generate_content - Received generation request with prompt: Generate a village with foggy...
+2025-03-17 17:01:37,526 - INFO - [server.py:128] - generate_content - Generation completed in 3.81 seconds
+2025-03-17 17:02:05,149 - INFO - [server.py:105] - generate_content - Received generation request with prompt: Generate me a lore for a windy person...
+2025-03-17 17:02:09,053 - INFO - [server.py:128] - generate_content - Generation completed in 3.90 seconds
+2025-03-17 17:10:08,635 - INFO - [server.py:207] - <module> - Starting Llama server on port 692420
+2025-03-17 17:10:08,636 - DEBUG - [selector_events.py:64] - __init__ - Using selector: EpollSelector
+2025-03-17 17:11:12,387 - INFO - [server.py:207] - <module> - Starting Llama server on port 692420
+2025-03-17 17:12:10,412 - INFO - [server.py:207] - <module> - Starting Llama server on port 421
+2025-03-17 17:12:15,161 - INFO - [server.py:207] - <module> - Starting Llama server on port 421
+2025-03-17 17:13:28,220 - INFO - [server.py:207] - <module> - Starting Llama server on port 421
+2025-03-17 17:15:53,165 - INFO - [server.py:207] - <module> - Starting Llama server on port 420
+2025-03-17 17:18:12,852 - INFO - [server.py:207] - <module> - Starting Llama server on port 1025
+2025-03-17 17:18:21,167 - INFO - [server.py:193] - health_check - Ollama version: 0.6.1
+2025-03-17 17:18:21,167 - INFO - [server.py:195] - health_check - Health check: {
+  "status": "healthy",
+  "ollama_running": true,
+  "timestamp": "2025-03-17T17:18:21.167360",
+  "ollama_version": "0.6.1"
+}
+2025-03-17 17:19:17,363 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:19:17,363 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:19:17,363 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- NPC
+
+Biome:
+- Forest
+
+Features:
+- Magic
+
+Constriction:
+- None
+
+Text Style:
+- Descriptive
+<</SYS>>
+
+Village
+
+Style: Descriptive [/INST]
+2025-03-17 17:19:17,363 - INFO - [server.py:139] - generate_content - User prompt: Village
+2025-03-17 17:19:17,363 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - NPC
+
+Biome:
+- - Forest
+
+Features:
+- - Magic
+
+Constriction:
+- - None
+
+Text Style:
+- - Descriptive
+<</SYS>>
+<</SYS>>
+
+Village
+
+Style: - Descriptive
+<</SYS>> [/INST]
+2025-03-17 17:19:17,363 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:19:17,363 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:19:17,363 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:19:17,363 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - NPC\n\nBiome:\n- - Forest\n\nFeatures:\n- - Magic\n\nConstriction:\n- - None\n\nText Style:\n- - Descriptive\n<</SYS>>\n<</SYS>>\n\nVillage\n\nStyle: - Descriptive\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:19:23,820 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:19:23,820 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:19:23,820 - INFO - [server.py:155] - generate_content - Generated response: As you enter the forest village, you are immediately struck by its tranquility. The air is filled with the sweet scent of blooming wildflowers and the soft chirping of birds can be heard in the distance. The villagers greet you warmly, their smiles radiating a sense of peace and contentment.
+
+The village is nestled among the towering trees, with tiny cottages made of natural materials like wood and stone blending seamlessly into the surroundings. The thatched roofs are adorned with flowers and vines, giving the impression of a delicate harmony between nature and architecture.
+
+As you wander through the village, you notice various magical creatures going about their daily business. A small fairy flits about a nearby garden, tending to colorful blooms with delicate wings that shimmer in the sunlight. A group of centaurs can be seen in the distance, their powerful muscles rippling beneath their furry coats as they work in the fields.
+
+The villagers are friendly and welcoming, eager to share their way of life with you. They invite you to join them in celebrating the harvest festival, a joyous occasion filled with music, dancing, and feasting on traditional forest fare like wild mushroom stews and berry tarts.
+
+As night falls, the village takes on an otherworldly quality. The stars twinkle above, casting a magical glow over the scene. A group of shadowy creatures can be seen gathered around a fire, their eyes glowing with a mysterious light as they share stories and laughter.
+
+You feel a deep sense of wonder and belonging in this enchanted village, where magic is an integral part of everyday life. The villagers seem to embody the forest's essence, living in harmony with nature and its mystical energies. As you settle in for the night, you can't help but feel grateful for this unexpected respite from your journey, surrounded by the magic and tranquility of the forest village.
+2025-03-17 17:19:23,820 - INFO - [server.py:156] - generate_content - Generation completed in 6.46 seconds
+2025-03-17 17:19:23,820 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:20:59,471 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:20:59,471 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:20:59,471 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- Village
+
+Biome:
+- Forest
+
+Features:
+- Magical
+
+Constriction:
+- No Sand
+
+Text Style:
+- Poetic
+<</SYS>>
+
+Village is full of mushroom and sausages, what is the meaning of this place
+
+Style: Poetic [/INST]
+2025-03-17 17:20:59,471 - INFO - [server.py:139] - generate_content - User prompt: Village is full of mushroom and sausages, what is the meaning of this place
+2025-03-17 17:20:59,471 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - Village
+
+Biome:
+- - Forest
+
+Features:
+- - Magical
+
+Constriction:
+- - No Sand
+
+Text Style:
+- - Poetic
+<</SYS>>
+<</SYS>>
+
+Village is full of mushroom and sausages, what is the meaning of this place
+
+Style: - Poetic
+<</SYS>> [/INST]
+2025-03-17 17:20:59,471 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:20:59,471 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:20:59,471 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:20:59,471 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - Village\n\nBiome:\n- - Forest\n\nFeatures:\n- - Magical\n\nConstriction:\n- - No Sand\n\nText Style:\n- - Poetic\n<</SYS>>\n<</SYS>>\n\nVillage is full of mushroom and sausages, what is the meaning of this place\n\nStyle: - Poetic\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:21:00,466 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:21:00,466 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:21:00,466 - INFO - [server.py:155] - generate_content - Generated response: In the village nestled 'midst a forest's embrace,
+Where fungi flourish and savory scents entice,
+A land of plenty, where hunger's pangs assuage,
+And sausages sizzle on makeshift grills with rapt attention.
+
+The air is sweet with earthy aromas that waft,
+From mushrooms of all kinds, their flavors and textures elating,
+2025-03-17 17:21:00,466 - INFO - [server.py:156] - generate_content - Generation completed in 0.99 seconds
+2025-03-17 17:21:00,466 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:21:25,153 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:21:25,153 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:21:25,153 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- Village
+
+Biome:
+- Forest
+
+Features:
+- Magical
+
+Constriction:
+- No Sand
+
+Text Style:
+- Descriptive
+<</SYS>>
+
+Village is full of mushroom and sausages, what is the meaning of this place
+
+Style: Descriptive [/INST]
+2025-03-17 17:21:25,153 - INFO - [server.py:139] - generate_content - User prompt: Village is full of mushroom and sausages, what is the meaning of this place
+2025-03-17 17:21:25,153 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - Village
+
+Biome:
+- - Forest
+
+Features:
+- - Magical
+
+Constriction:
+- - No Sand
+
+Text Style:
+- - Descriptive
+<</SYS>>
+<</SYS>>
+
+Village is full of mushroom and sausages, what is the meaning of this place
+
+Style: - Descriptive
+<</SYS>> [/INST]
+2025-03-17 17:21:25,153 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:21:25,153 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:21:25,153 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:21:25,154 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - Village\n\nBiome:\n- - Forest\n\nFeatures:\n- - Magical\n\nConstriction:\n- - No Sand\n\nText Style:\n- - Descriptive\n<</SYS>>\n<</SYS>>\n\nVillage is full of mushroom and sausages, what is the meaning of this place\n\nStyle: - Descriptive\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:21:29,486 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:21:29,486 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:21:29,486 - INFO - [server.py:155] - generate_content - Generated response: As you enter the village, you are immediately struck by the overwhelming aroma of sausages and mushrooms. The air is thick with the smell of sizzling meat and earthy fungi, making your mouth water in anticipation. The villagers, who seem to be primarily made up of dwarves and halflings, are busily tending to their gardens and workshops, each one engrossed in their own task.
+
+The village itself is a hive of activity, with sausages cooking on spits over open flames, mushrooms being chopped and prepared for various dishes, and pots bubbling with stews and soups. Every now and then, you catch sight of someone indulging in a hearty laugh or a warm smile, further adding to the convivial atmosphere.
+
+As you wander through the village, you notice strange symbols etched into the walls and floors of the buildings. They seem to be some sort of ancient runes, glowing with a soft, ethereal light. The villagers eye you curiously as you examine these markings, but they don't seem overly concerned or threatened by your presence.
+
+One elderly dwarf approaches you, offering a warm smile and a hearty pat on the back. "Ah, a brave adventurer! Come in, come in! We've been expecting you. My name is Grimbold Ironfist, and I'll be your host here in Mushroomville."
+
+Grimbold leads you to his cozy workshop, filled with all manner of strange and wondrous devices. "I see you're curious about our little village," he says, eyeing the symbols on your face. "Ah, yes...those are the Marks of the Great Mushroom Mother. She blessed this land with her bounty, and we honor her in our own small way."
+
+You ask Grimbold more questions about the marks and the village's history, but he seems reluctant to share too much information. "Ah, well...it's a long story, full of mushrooms and magic," he says with a wink. "But I think you'll find that there's plenty to discover here in Mushroomville. Just be sure to enjoy the mushroom-based cuis
+2025-03-17 17:21:29,486 - INFO - [server.py:156] - generate_content - Generation completed in 4.33 seconds
+2025-03-17 17:21:29,486 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:23:27,926 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:23:27,926 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:23:27,926 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- Tavern
+
+Biome:
+- Desert
+
+Features:
+- Magical
+
+Constriction:
+- No Magic
+
+Text Style:
+- Concise
+<</SYS>>
+
+Describe me the Tavern called PEROZILELOALAOALO and give me a description of people in her
+
+Style: Concise [/INST]
+2025-03-17 17:23:27,926 - INFO - [server.py:139] - generate_content - User prompt: Describe me the Tavern called PEROZILELOALAOALO and give me a description of people in her
+2025-03-17 17:23:27,926 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - Tavern
+
+Biome:
+- - Desert
+
+Features:
+- - Magical
+
+Constriction:
+- - No Magic
+
+Text Style:
+- - Concise
+<</SYS>>
+<</SYS>>
+
+Describe me the Tavern called PEROZILELOALAOALO and give me a description of people in her
+
+Style: - Concise
+<</SYS>> [/INST]
+2025-03-17 17:23:27,927 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:23:27,927 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:23:27,927 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:23:27,927 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - Tavern\n\nBiome:\n- - Desert\n\nFeatures:\n- - Magical\n\nConstriction:\n- - No Magic\n\nText Style:\n- - Concise\n<</SYS>>\n<</SYS>>\n\nDescribe me the Tavern called PEROZILELOALAOALO and give me a description of people in her\n\nStyle: - Concise\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:23:31,146 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:23:31,146 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:23:31,146 - INFO - [server.py:155] - generate_content - Generated response: In the heart of the bustling desert town of Perozileloalalo stands a tavern unlike any other. The walls are adorned with faded tapestries, and the air is thick with the smell of smoke and sweat. Patrons huddle around tables, their faces etched with the weight of their travels in this unforgiving landscape.
+
+Behind the bar stands a stout dwarf named Grimgold Ironfist, his broad shoulders and stern expression commanding respect from all who enter. His voice booms across the room, "What can I get ye? A mug o' ale to quench yer thirst after days on the road? Or perhaps a hearty meal to fill yer belly?"
+
+Sitting at a nearby table is a hooded figure, cloaked in shadows. Their face is hidden, but their eyes gleam with an otherworldly intensity as they scan the room. A whisper circulates among patrons: that dark elf mercenaries have been spotted lurking outside the town limits, and Perozileloalalo may be next on their conquest.
+
+Other patrons include a human adventurer armed with a battered leather-bound book of spells, a halfling bard with a mischievous twinkle in his eye and an endless supply of tales to tell, and a stout dwarf cleric who radiates an aura of devotion as he prays fervently at the bar.
+
+Will you:
+A) Approach Grimgold Ironfist for a drink or meal?
+B) Hail the hooded figure with suspicion and curiosity?
+C) Ignore them both and seek out another table to enjoy your ale in peace?
+2025-03-17 17:23:31,146 - INFO - [server.py:156] - generate_content - Generation completed in 3.22 seconds
+2025-03-17 17:23:31,146 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:23:42,411 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:23:42,411 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:23:42,411 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- Tavern
+
+Biome:
+- Desert
+
+Features:
+- Magical
+
+Constriction:
+- No Magic
+
+Text Style:
+- Concise
+<</SYS>>
+
+Describe me the Tavern called PEROZILELOALAOALO and give me a description of people in her
+
+Style: Concise [/INST]
+2025-03-17 17:23:42,411 - INFO - [server.py:139] - generate_content - User prompt: Describe me the Tavern called PEROZILELOALAOALO and give me a description of people in her
+2025-03-17 17:23:42,411 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - Tavern
+
+Biome:
+- - Desert
+
+Features:
+- - Magical
+
+Constriction:
+- - No Magic
+
+Text Style:
+- - Concise
+<</SYS>>
+<</SYS>>
+
+Describe me the Tavern called PEROZILELOALAOALO and give me a description of people in her
+
+Style: - Concise
+<</SYS>> [/INST]
+2025-03-17 17:23:42,411 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:23:42,411 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:23:42,411 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:23:42,411 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - Tavern\n\nBiome:\n- - Desert\n\nFeatures:\n- - Magical\n\nConstriction:\n- - No Magic\n\nText Style:\n- - Concise\n<</SYS>>\n<</SYS>>\n\nDescribe me the Tavern called PEROZILELOALAOALO and give me a description of people in her\n\nStyle: - Concise\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:23:48,105 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:23:48,105 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:23:48,105 - INFO - [server.py:155] - generate_content - Generated response: Of course, here is your tavern description! 😃
+
+PEROZILELOALAOALO Tavern
+
+Nestled between two dunes in the scorching desert, this ramshackle inn offers weary travelers a chance to rest and refresh themselves. The sign above the door reads "Perozilelo's Oasis of Relief," and the proprietor, Perozilelo, is always happy to see new faces.
+
+Inside, the tavern is dimly lit by torches and lanterns, with a low hum of chatter filling the air. The walls are adorned with cobweb-covered trinkets and tattered travel posters, giving the place a dusty, forgotten feel. Perozilelo's wife, Aaloa, tends to the bar, pouring drinks for the patrons with a warm smile.
+
+People
+
+The clientele at Perozilelo's Oasis of Relief are a diverse bunch, all united by their love of adventure and desire for rest after long journeys through the desert. Here are a few notable characters you might encounter:
+
+1. Renn, a grizzled old explorer with stories to tell of his time in the forgotten ruins beyond the dunes. He's always happy to share tales of his adventures over a mug of ale.
+2. Zara, a fierce and skilled warrior from a far-off land, currently on a quest to rid the desert of bandits. She stops by Perozilelo's for respite and to gather information about her next move.
+3. Lila, an enigmatic traveling performer with incredible acrobatic feats. She uses the tavern as a stopover between engagements in various oases across the desert.
+4. Turin, a young apprentice wizard from a nearby city, seeking shelter and safety after escaping persecution for his magical abilities. He's hushed and nervous around the other patrons, but Perozilelo is kind and understanding towards him.
+
+I hope this gives you a good starting point for your adventures in Perozilelo's Oasis of Relief! 😊
+2025-03-17 17:23:48,105 - INFO - [server.py:156] - generate_content - Generation completed in 5.69 seconds
+2025-03-17 17:23:48,105 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:24:36,187 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:24:36,187 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:24:36,187 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- NPC
+
+Biome:
+- Forest
+
+Features:
+- Magic
+
+Constriction:
+- None
+
+Text Style:
+- Descriptive
+<</SYS>>
+
+testing loading 
+
+Style: Descriptive [/INST]
+2025-03-17 17:24:36,187 - INFO - [server.py:139] - generate_content - User prompt: testing loading 
+2025-03-17 17:24:36,187 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - NPC
+
+Biome:
+- - Forest
+
+Features:
+- - Magic
+
+Constriction:
+- - None
+
+Text Style:
+- - Descriptive
+<</SYS>>
+<</SYS>>
+
+testing loading 
+
+Style: - Descriptive
+<</SYS>> [/INST]
+2025-03-17 17:24:36,187 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:24:36,187 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:24:36,187 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:24:36,187 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - NPC\n\nBiome:\n- - Forest\n\nFeatures:\n- - Magic\n\nConstriction:\n- - None\n\nText Style:\n- - Descriptive\n<</SYS>>\n<</SYS>>\n\ntesting loading \n\nStyle: - Descriptive\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:24:38,165 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:24:38,165 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:24:38,165 - INFO - [server.py:155] - generate_content - Generated response: You find yourself standing in a dense forest, the trees towering above you like sentinels. The air is crisp and clean, with a hint of magic in the air. You can feel it coursing through your veins, a thrill of excitement running down your spine.
+
+As you explore the forest, you come across a clearing where a group of NPCs are gathered. They're dressed in leather armor and carrying weapons, their eyes scanning the surroundings with a mixture of curiosity and suspicion. One of them approaches you, his voice gruff but friendly.
+
+"Who are you? What brings you to our neck of the woods?" he asks, eyeing you warily.
+
+You can:
+A) Introduce yourself and explain your purpose
+B) Ask the NPCs about the forest and its secrets
+C) Offer to help the NPCs with a task in exchange for information
+D) Ignore them and continue exploring the forest alone
+E) Other (please specify)
+2025-03-17 17:24:38,165 - INFO - [server.py:156] - generate_content - Generation completed in 1.98 seconds
+2025-03-17 17:24:38,165 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:26:27,345 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:26:27,345 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:26:27,345 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- NPC
+
+Biome:
+- Forest
+
+Features:
+- Magic
+
+Constriction:
+- None
+
+Text Style:
+- Descriptive
+<</SYS>>
+
+jjjjjjjjjjj
+
+Style: Descriptive [/INST]
+2025-03-17 17:26:27,345 - INFO - [server.py:139] - generate_content - User prompt: jjjjjjjjjjj
+2025-03-17 17:26:27,345 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - NPC
+
+Biome:
+- - Forest
+
+Features:
+- - Magic
+
+Constriction:
+- - None
+
+Text Style:
+- - Descriptive
+<</SYS>>
+<</SYS>>
+
+jjjjjjjjjjj
+
+Style: - Descriptive
+<</SYS>> [/INST]
+2025-03-17 17:26:27,345 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:26:27,345 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:26:27,345 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:26:27,345 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - NPC\n\nBiome:\n- - Forest\n\nFeatures:\n- - Magic\n\nConstriction:\n- - None\n\nText Style:\n- - Descriptive\n<</SYS>>\n<</SYS>>\n\njjjjjjjjjjj\n\nStyle: - Descriptive\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:26:29,740 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:26:29,740 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:26:29,740 - INFO - [server.py:155] - generate_content - Generated response: Welcome, adventurer! The forest is alive with magic and mystery. As you venture deeper into the woods, the trees tower above you, their trunks thick and gnarled. The air is filled with the sweet scent of blooming wildflowers and the soft chirping of birds. You can hear the gentle babbling of a nearby stream, beckoning you to come closer.
+
+As you explore this enchanted forest, you notice that the trees seem to be watching you. Their branches reach out like ghostly fingers, as if trying to touch your face. The wind whispers secrets in your ear, and you can't shake off the feeling that you're being led deeper into the woods for a reason.
+
+You come across a clearing, where a group of fey creatures are gathered around a glowing crystal. They seem to be performing some sort of ritual, their voices singing in harmony with the melody of nature. The fey creatures turn to you, their eyes sparkling with curiosity and intrigue.
+
+One of them steps forward, offering you a small vial filled with shimmering liquid. "Drink this," they say, "and you shall be granted a single wish."
+
+What do you do?
+2025-03-17 17:26:29,740 - INFO - [server.py:156] - generate_content - Generation completed in 2.40 seconds
+2025-03-17 17:26:29,740 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:27:17,996 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:27:17,996 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:27:17,996 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- Lore
+
+Biome:
+- Mountain
+
+Features:
+- Ancient
+
+Constriction:
+- No Sand
+
+Text Style:
+- Descriptive
+<</SYS>>
+
+Go to the village of the Orc of the dammed ice and ask them if honor matter
+
+Style: Descriptive [/INST]
+2025-03-17 17:27:17,996 - INFO - [server.py:139] - generate_content - User prompt: Go to the village of the Orc of the dammed ice and ask them if honor matter
+2025-03-17 17:27:17,996 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - Lore
+
+Biome:
+- - Mountain
+
+Features:
+- - Ancient
+
+Constriction:
+- - No Sand
+
+Text Style:
+- - Descriptive
+<</SYS>>
+<</SYS>>
+
+Go to the village of the Orc of the dammed ice and ask them if honor matter
+
+Style: - Descriptive
+<</SYS>> [/INST]
+2025-03-17 17:27:17,996 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:27:17,996 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:27:17,996 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:27:17,996 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - Lore\n\nBiome:\n- - Mountain\n\nFeatures:\n- - Ancient\n\nConstriction:\n- - No Sand\n\nText Style:\n- - Descriptive\n<</SYS>>\n<</SYS>>\n\nGo to the village of the Orc of the dammed ice and ask them if honor matter\n\nStyle: - Descriptive\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:27:22,387 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:27:22,387 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:27:22,387 - INFO - [server.py:155] - generate_content - Generated response: As you enter the small, remote village nestled at the base of a mountain, you can't help but feel a sense of unease. The air is thick with an unspoken tension, and the Orcs eyeing you from every corner seem more menacing than usual. You approach the central hut, where the elderly Orc chieftain sits, surrounded by his kin.
+
+"Greetings, traveler," the chieftain says in a gruff voice, eyeing you warily. "What brings you to our humble village?"
+
+You explain your quest and ask about the importance of honor among the Orcs. The chieftain nods thoughtfully, his weathered face creasing into a small smile.
+
+"Ah, yes. Honor is everything to us Orcs. It's what sets us apart from the rest of the world, what makes our tribe strong and proud. Without honor, we are nothing but savage beasts, rutting in the mud like animals." He pauses, his eyes glinting with a distant fire. "But I suppose you want to know why we've been... dammed, as you put it."
+
+The chieftain's expression turns grim. "Our honor was lost long ago, when the Ice Giants came to our mountain. They offered us a deal – they would grant us immortality and unmatched strength if we served them faithfully. Many of my kin were swayed by their false promises, and we fought bravely alongside them in their wars. But the Ice Giants betrayed us, just as they have betrayed all who have served them. They froze our mountain, trapping us inside with no way out."
+
+The chieftain's voice drips with venom as he continues. "Now we are cursed to dwell here, surrounded by an endless winter that mocks our very existence. Our honor is all that keeps us from descending into madness and despair. It's what gives us the strength to carry on, despite everything."
+
+His eyes bore into yours as he finishes, his message clear: honor may have been lost, but it's all that remains for the Orcs of the dammed ice. Do you wish to continue your quest or offer your condolences?
+2025-03-17 17:27:22,387 - INFO - [server.py:156] - generate_content - Generation completed in 4.39 seconds
+2025-03-17 17:27:22,387 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:32:10,082 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:32:10,082 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:32:10,082 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- null
+
+Biome:
+- null
+
+Features:
+- null
+
+Constriction:
+- null
+
+Text Style:
+- null
+<</SYS>>
+
+A lore about the mad king potato that had a magic wand tha was called Alfredo and was shooting pasta
+
+Style: null [/INST]
+2025-03-17 17:32:10,082 - INFO - [server.py:139] - generate_content - User prompt: A lore about the mad king potato that had a magic wand tha was called Alfredo and was shooting pasta
+2025-03-17 17:32:10,082 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - null
+
+Biome:
+- - null
+
+Features:
+- - null
+
+Constriction:
+- - null
+
+Text Style:
+- - null
+<</SYS>>
+<</SYS>>
+
+A lore about the mad king potato that had a magic wand tha was called Alfredo and was shooting pasta
+
+Style: - null
+<</SYS>> [/INST]
+2025-03-17 17:32:10,082 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:32:10,082 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:32:10,082 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:32:10,082 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - null\n\nBiome:\n- - null\n\nFeatures:\n- - null\n\nConstriction:\n- - null\n\nText Style:\n- - null\n<</SYS>>\n<</SYS>>\n\nA lore about the mad king potato that had a magic wand tha was called Alfredo and was shooting pasta\n\nStyle: - null\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:32:14,498 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:32:14,498 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:32:14,498 - INFO - [server.py:155] - generate_content - Generated response: In the land of Potatia, where the air was filled with the sweet scent of tubers and the sky was painted with the vibrant colors of vegetables, there lived a mad king named King Potato. This eccentric ruler was known throughout the kingdom for his wild antics and bizarre obsession with all things pasta.
+
+One day, while wandering through the lush green fields of his kingdom, King Potato stumbled upon a mysterious magic wand nestled in the soil. The wand, which he named Alfredo, was unlike any other artifact in the kingdom. It had the power to shoot forth streams of golden pasta that could be molded into whatever shape the king desired.
+
+King Potato was enchanted by this magical find and immediately began experimenting with its powers. He created vast structures made of spaghetti, tangled webs of linguine, and even a grand palace crafted from penne noodles. His subjects marveled at the king's creations, mesmerized by their beauty and ingenuity.
+
+But King Potato's obsession with Alfredo soon became an issue for his kingdom. The wand's constant shooting of pasta caused chaos in the countryside, destroying crops and fields. His subjects begged him to stop using the wand, but King Potato refused, convinced that he was on the brink of creating something truly magnificent.
+
+As time passed, King Potato's madness only grew stronger, and Alfredo became his sole focus. He spent every waking moment experimenting with new pasta shapes and designs, neglecting the needs of his people. His subjects lived in fear of his outbursts, always wondering when he would unleash his next wild creation upon them.
+
+One fateful day, King Potato's obsession with Alfredo led to disaster. He created a massive structure made of linguine that towered over the kingdom, threatening to collapse and crush everything in its path. Panicked, the subjects begged him to stop Alfredo, but it was too late. The structure collapsed, burying King Potato and his kingdom beneath a sea of noodles.
+
+In the aftermath of the disaster, the people of Potatia realized that their king had gone mad with power and neglected the needs of his subjects. They
+2025-03-17 17:32:14,498 - INFO - [server.py:156] - generate_content - Generation completed in 4.42 seconds
+2025-03-17 17:32:14,498 - INFO - [server.py:157] - generate_content - ==================================================
+2025-03-17 17:42:26,977 - INFO - [server.py:136] - generate_content - ==================================================
+2025-03-17 17:42:26,977 - INFO - [server.py:137] - generate_content - Starting new generation request
+2025-03-17 17:42:26,977 - INFO - [server.py:138] - generate_content - System message: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- null
+
+Biome:
+- null
+
+Features:
+- null
+
+Constriction:
+- null
+
+Text Style:
+- null
+<</SYS>>
+
+Town in plains in middle ages with no magic with high buildings cyberpunk, you and three amigos come into fire
+
+Style: null [/INST]
+2025-03-17 17:42:26,977 - INFO - [server.py:139] - generate_content - User prompt: Town in plains in middle ages with no magic with high buildings cyberpunk, you and three amigos come into fire
+2025-03-17 17:42:26,977 - DEBUG - [server.py:77] - build_prompt - Built prompt: <s>[INST] <<SYS>>
+I assume role as DM generating content with the following settings:
+
+Choice:
+- - null
+
+Biome:
+- - null
+
+Features:
+- - null
+
+Constriction:
+- - null
+
+Text Style:
+- - null
+<</SYS>>
+<</SYS>>
+
+Town in plains in middle ages with no magic with high buildings cyberpunk, you and three amigos come into fire
+
+Style: - null
+<</SYS>> [/INST]
+2025-03-17 17:42:26,977 - INFO - [server.py:145] - generate_content - Built formatted prompt
+2025-03-17 17:42:26,977 - INFO - [server.py:148] - generate_content - Starting text generation with Ollama...
+2025-03-17 17:42:26,977 - INFO - [server.py:86] - call_ollama - Preparing to call Ollama API
+2025-03-17 17:42:26,977 - DEBUG - [server.py:109] - call_ollama - Executing curl command: curl -X POST http://localhost:11434/api/generate -d {"model": "llama2", "prompt": "<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\nChoice:\n- - null\n\nBiome:\n- - null\n\nFeatures:\n- - null\n\nConstriction:\n- - null\n\nText Style:\n- - null\n<</SYS>>\n<</SYS>>\n\nTown in plains in middle ages with no magic with high buildings cyberpunk, you and three amigos come into fire\n\nStyle: - null\n<</SYS>> [/INST]", "stream": false, "options": {"temperature": 0.85, "top_p": 0.95, "top_k": 40, "num_predict": 512, "repeat_penalty": 1.15, "seed": -1}}
+2025-03-17 17:42:31,432 - INFO - [server.py:120] - call_ollama - Successfully received response from Ollama
+2025-03-17 17:42:31,432 - INFO - [server.py:150] - generate_content - Text generation completed
+2025-03-17 17:42:31,432 - INFO - [server.py:155] - generate_content - Generated response: Welcome to the town of New Haven, a bustling settlement in the heart of the plains. The year is 1274 AD, and the air is filled with the hum of activity as merchants and travelers move through the winding streets. As you and your three amigos enter the town, you notice that something is off. The buildings are taller than they should be, and the streets are filled with strange machines that puff and chug along, belching smoke into the air.
+
+As you make your way through the town, you realize that this place is not like any other settlement you've been to. The people here seem to be living in a world of their own, one that blends the old with the new in unexpected ways. You see women wearing dresses made of shimmering fabrics, while men in leather aprons tinker with glowing circuits. Children play games on small, handheld devices, and old folks sit on benches, watching the world go by through the lens of their strange, glowing spectacles.
+
+You notice that there seems to be a lack of magic in this place, as if it's been... forgotten? You can't quite put your finger on why, but something feels off about the whole situation. As you explore deeper into town, you begin to uncover clues that hint at a larger conspiracy at play here.
+
+Do you:
+A) Ask around and try to gather more information about what's going on in New Haven
+B) Investigate the strange machines and devices you've seen
+C) Try to find the source of the lack of magic in the town
+D) Follow your instincts and explore a different part of town
+
+What will you do?
+2025-03-17 17:42:31,432 - INFO - [server.py:156] - generate_content - Generation completed in 4.45 seconds
+2025-03-17 17:42:31,432 - INFO - [server.py:157] - generate_content - ==================================================

@@ -3,3 +3,4 @@ node_modules/
 python/llama27b/village_finetuned_model/
 python/image-generation/outputs/
 python/llama7b-chat/actor-method/response_data/
+python/llama7b-chat/llama_server_*

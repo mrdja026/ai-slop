@@ -36,6 +36,14 @@ export default defineConfig({
     hmr: {
       overlay: false,
     },
+    host: true,
+    port: 3000,
+    allowedHosts: [
+      'localhost',
+      '127.0.0.1',
+      '.ngrok-free.app',  // Allow all ngrok-free.app subdomains
+      '.ngrok.io',        // Allow all ngrok.io subdomains
+    ]
   },
   optimizeDeps: {
     exclude: ["remix:manifest"],
