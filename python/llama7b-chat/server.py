@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, Response
 from pydantic import BaseModel
 from typing import Optional, List
 import logging
@@ -10,6 +10,7 @@ from datetime import datetime
 import time
 import json
 import subprocess
+import os
 
 # Configure logging with detailed format
 logging.basicConfig(
@@ -38,6 +39,14 @@ class GenerationRequest(BaseModel):
     prompt: str
     system_message: str
 
+class ImageGenerationRequest(BaseModel):
+    prompt: str
+    negative_prompt: str = "blurry, low quality, distorted, deformed, disfigured, bad anatomy, ugly, duplicate, error"
+    num_steps: int = 30
+    guidance_scale: float = 7.5
+    height: int = 768
+    width: int = 512
+
 def build_prompt(system_msg: str, user_prompt: str) -> str:
     """Build the prompt in Llama 2 chat format"""
     try:
@@ -55,14 +64,33 @@ def build_prompt(system_msg: str, user_prompt: str) -> str:
         for component in components:
             if component.startswith("Choice:"):
                 choice = component.replace("Choice:", "").strip()
+                logger.debug(f"Parsed Choice: '{choice}'")
             elif component.startswith("Biome:"):
                 biome = component.replace("Biome:", "").strip()
+                logger.debug(f"Parsed Biome: '{biome}'")
             elif component.startswith("Features:"):
                 features = component.replace("Features:", "").strip()
+                logger.debug(f"Parsed Features: '{features}'")
             elif component.startswith("Constriction:"):
                 constriction = component.replace("Constriction:", "").strip()
+                logger.debug(f"Parsed Constriction: '{constriction}'")
             elif component.startswith("Text Style:"):
                 text_style = component.replace("Text Style:", "").strip()
+                logger.debug(f"Parsed Text Style: '{text_style}'")
+
+        # Validate components
+        missing_components = []
+        if not choice or choice == "- null":
+            missing_components.append("Choice")
+        if not biome or biome == "- null":
+            missing_components.append("Biome")
+        if not features or features == "- null":
+            missing_components.append("Features")
+        if not text_style or text_style == "- null":
+            missing_components.append("Text Style")
+
+        if missing_components:
+            logger.warning(f"Missing or invalid components: {', '.join(missing_components)}")
 
         # Build the prompt in the exact format requested
         prompt = f"<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\n"
@@ -74,7 +102,7 @@ def build_prompt(system_msg: str, user_prompt: str) -> str:
         prompt += f"<</SYS>>\n\n{user_prompt}\n\n"
         prompt += f"Style: {text_style} [/INST]"
 
-        logger.debug(f"Built prompt: {prompt}")
+        logger.debug(f"Built prompt_DEBUG: {prompt}")
         return prompt
     except Exception as e:
         logger.error(f"Error building prompt: {str(e)}")
@@ -201,6 +229,121 @@ async def health_check():
             "error": str(e),
             "timestamp": datetime.now().isoformat()
         }
+
+@app.post("/generate-image")
+async def generate_image(request: ImageGenerationRequest):
+    """Generate an image using the Stable Diffusion model"""
+    try:
+        logger.info("="*50)
+        logger.info("Starting image generation request")
+        logger.info(f"Prompt: {request.prompt}")
+        logger.info(f"Parameters: steps={request.num_steps}, guidance={request.guidance_scale}, size={request.height}x{request.width}")
+
+        # Get absolute paths
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        script_path = os.path.abspath(os.path.join(current_dir, "..", "image-generation", "generate-stable-fusion.py"))
+        output_dir = os.path.abspath(os.path.join(current_dir, "..", "image-generation", "outputs", "generated_images"))
+
+        # Verify script exists
+        if not os.path.exists(script_path):
+            error_msg = f"Image generation script not found at: {script_path}"
+            logger.error(error_msg)
+            raise HTTPException(status_code=500, detail=error_msg)
+
+        # Ensure output directory exists
+        os.makedirs(output_dir, exist_ok=True)
+
+        # Generate a unique filename
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        output_file = os.path.abspath(os.path.join(output_dir, f"generated_{timestamp}.png"))
+
+        logger.info(f"Script path: {script_path}")
+        logger.info(f"Output file: {output_file}")
+
+        # Build the command with all parameters
+        command = [
+            sys.executable,
+            script_path,
+            "--single_image",
+            "--prompt", request.prompt,
+            "--negative_prompt", request.negative_prompt,
+            "--num_steps", str(request.num_steps),
+            "--guidance_scale", str(request.guidance_scale),
+            "--height", str(request.height),
+            "--width", str(request.width),
+            "--output_file", output_file,
+            "--return_base64"  # Request base64 output
+        ]
+
+        # Execute the command
+        start_time = time.time()
+        logger.info(f"Executing command: {' '.join(command)}")
+
+        try:
+            result = subprocess.run(
+                command,
+                capture_output=True,
+                text=True,
+                check=True
+            )
+        except subprocess.CalledProcessError as e:
+            error_msg = f"Command failed with return code {e.returncode}"
+            logger.error(f"{error_msg}\nCommand output: {e.stdout}\nCommand error: {e.stderr}")
+            raise HTTPException(status_code=500, detail=error_msg)
+
+        if result.returncode != 0:
+            error_msg = f"Command failed with return code {result.returncode}"
+            logger.error(f"{error_msg}\nCommand output: {result.stdout}\nCommand error: {result.stderr}")
+            raise HTTPException(status_code=500, detail=error_msg)
+
+        generation_time = time.time() - start_time
+        logger.info(f"Image generation process completed in {generation_time:.2f}s")
+
+        # Log the full output for debugging
+        logger.debug(f"Full command output:\n{result.stdout}")
+
+        # Extract base64 from output
+        base64_image = None
+        for line in result.stdout.split('\n'):
+            if line.startswith('BASE64:'):
+                base64_image = line[7:]  # Remove 'BASE64:' prefix
+                logger.info("Found base64 data in output")
+                break
+
+        if not base64_image:
+            error_msg = "Base64 image data not found in output"
+            logger.error(f"{error_msg}\nFull output:\n{result.stdout}")
+            raise HTTPException(status_code=500, detail=error_msg)
+
+        # Verify the base64 data is valid
+        try:
+            import base64
+            # Try to decode the base64 string to verify it's valid
+            decoded_data = base64.b64decode(base64_image)
+            logger.info(f"Base64 data validation successful. Decoded size: {len(decoded_data)} bytes")
+        except Exception as e:
+            error_msg = f"Invalid base64 data: {str(e)}"
+            logger.error(error_msg)
+            raise HTTPException(status_code=500, detail=error_msg)
+
+        logger.info("Successfully extracted and validated base64 image data")
+        logger.info("="*50)
+
+        return {
+            "success": True,
+            "image_base64": base64_image,
+            "generation_time": f"{generation_time:.2f}s",
+            "image_size": f"{request.height}x{request.width}",
+            "file_path": output_file
+        }
+
+    except HTTPException as he:
+        raise he
+    except Exception as e:
+        error_msg = f"Image generation error: {str(e)}"
+        logger.error(f"{error_msg}\n{traceback.format_exc()}")
+        logger.error("="*50)
+        raise HTTPException(status_code=500, detail=error_msg)
 
 if __name__ == "__main__":
     import uvicorn
