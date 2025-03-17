@@ -105,41 +105,22 @@ def build_prompt(
     constraints: Optional[List[str]] = None
 ) -> str:
     """
-    Builds a prompt in Llama 2 chat format matching the frontend structure.
+    Builds a prompt in Llama 2 chat format.
+    Note: Constraints and style should be passed only if not already in system_msg
     """
-    # Split system_msg into components if it contains them
-    components = system_msg.split('\n\n')
+    prompt = f"<s>[INST] <<SYS>>\n{system_msg}"
 
-    # Initialize default values
-    choice = ""
-    biome = ""
-    features = ""
-    constriction = ""
-    text_style = style if style else ""
+    # Only add constraints if they're not already in system_msg
+    if constraints and "Constraints:" not in system_msg:
+        prompt += "\n\nCONSTRAINTS:\n- " + "\n- ".join(constraints)
 
-    # Parse components if they exist
-    for component in components:
-        if component.startswith("Choice:"):
-            choice = component.replace("Choice:", "").strip()
-        elif component.startswith("Biome:"):
-            biome = component.replace("Biome:", "").strip()
-        elif component.startswith("Features:"):
-            features = component.replace("Features:", "").strip()
-        elif component.startswith("Constriction:"):
-            constriction = component.replace("Constriction:", "").strip()
-        elif component.startswith("Text Style:"):
-            text_style = component.replace("Text Style:", "").strip()
+    prompt += f"\n<</SYS>>\n\n{user_prompt}"
 
-    # Build the prompt in the exact format requested
-    prompt = f"<s>[INST] <<SYS>>\nI assume role as DM generating content with the following settings:\n\n"
-    prompt += f"Choice:\n- {choice}\n\n"
-    prompt += f"Biome:\n- {biome}\n\n"
-    prompt += f"Features:\n- {features}\n\n"
-    prompt += f"Constriction:\n- {constriction}\n\n"
-    prompt += f"Text Style:\n- {text_style}\n"
-    prompt += f"<</SYS>>\n\n{user_prompt}\n\n"
-    prompt += f"Style: {text_style} [/INST]"
+    # Only add style if it's not already in system_msg
+    if style and "Style:" not in system_msg:
+        prompt += f"\n\nStyle: {style}"
 
+    prompt += " [/INST]"
     return prompt
 
 def generate_response(
@@ -295,7 +276,7 @@ def test_prompt_generation():
     final_prompt = build_prompt(
         system_msg=system_message,
         user_prompt=test_user_prompt
-    )
+w    )
     print(final_prompt)
 
 if __name__ == "__main__":
